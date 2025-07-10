@@ -456,7 +456,7 @@ function Product() {
         <div className="row">
           {sections.map((section, index) => (
             <div key={index} className="col-sm-12 mt-3 d-flex justify-content-center p-2">
-              <div className="position-relative" style={{ width: "400px", height: "217px" }}>
+              <div className="position-relative" >
                 <Image
                   src={section.src}
                   width={600}

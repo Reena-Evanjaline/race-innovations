@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-white " >
+      <nav className="navbar navbar-expand-lg bg-white position-fixed" style={{ zIndex: 1000,width: "100%" }}>
         <div className="container-fluid">
           <Link className="navbar-brand d_navlogo" href="/">
             <Image src="/images/hori.png" alt="Logo" width={180} height={50} />
