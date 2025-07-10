@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-white sticky-top">
+      <nav className="navbar navbar-expand-lg bg-white " >
         <div className="container-fluid">
           <Link className="navbar-brand d_navlogo" href="/">
             <Image src="/images/hori.png" alt="Logo" width={180} height={50} />
@@ -542,7 +542,7 @@ const Navbar = () => {
           </div>
 
           {/* bottom */}
-          <div className="container">
+          
           <div className={styles.mobile_navbar}>
             <div className={styles.navigation}>
               <Link href="" style={{ textDecoration: "none" }}>
@@ -581,7 +581,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          </div>
+          
         </div>
       </nav>
     </>
