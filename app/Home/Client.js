@@ -35,7 +35,7 @@ const ClientSection = () => {
   ];
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid ">
       <div className="partner-ship py-4">
         <Swiper
           spaceBetween={20}

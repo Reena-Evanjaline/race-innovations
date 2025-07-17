@@ -4,7 +4,7 @@ import React from 'react';
 function Investors() {
   return (
     <div
-      className="container-fluid mt-3 d-flex flex-column align-items-center justify-content-center position-relative"
+      className="container-fluid   d-flex flex-column align-items-center justify-content-center position-relative"
       style={{
         height: "80vh",
         width: "100%",

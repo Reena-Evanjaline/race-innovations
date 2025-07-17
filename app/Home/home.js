@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="main-content">
+      <div className="main-content ">
       <Slider />
       <Industry />
       <Partner />

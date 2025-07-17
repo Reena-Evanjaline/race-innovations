@@ -15,7 +15,7 @@ function Landing() {
     <>
       {/* Background Section */}
       <motion.div
-        className="container-fluid mt-3 p-5 d-flex align-items-center"
+        className="container-fluid  p-5 d-flex align-items-center"
         style={{
           backgroundImage: 'url("/images/bg-s.png")',
           backgroundSize: "cover",

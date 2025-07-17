@@ -11,7 +11,7 @@ function Mission() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid ">
       <div className="row align-items-center">
         <motion.div
           className="col-12 col-md-4 text-center text-md-end d-flex flex-column justify-content-center"

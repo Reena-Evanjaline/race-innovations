@@ -30,7 +30,7 @@ const Partner = () => {
         <span style={{ color: "#293BB1" }}> Partnerships</span>
       </h1>
       <div
-        className="container-fluid mt-4"
+        className="container-fluid "
         style={{ backgroundColor: "#F5F5F5", padding: "20px" }}
       >
         <div className="partner-ship">

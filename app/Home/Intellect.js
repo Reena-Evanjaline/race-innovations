@@ -4,7 +4,7 @@ import Image from "next/image";
 function Intellect() {
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid ">
         <div className="row mt-1">
           <div className="col-md-6 col-12">
             <h1 className="mt-5" style={{ color: "#293BB1" }}>

@@ -12,7 +12,7 @@ function Mission() {
   return (
     <>
       <motion.div
-        className="container-fluid mt-1"
+        className="container-fluid "
 
         initial="hidden"
         whileInView="visible"

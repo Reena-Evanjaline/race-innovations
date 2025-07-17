@@ -17,14 +17,14 @@ function Front() {
   return (
     <>
       <motion.div
-        className="container-fluid  p-4 d-flex align-items-center"
+        className="container-fluid p-4 d-flex align-items-center"
 
         initial="hidden"
         animate="visible"
         variants={slideUpOnce}
         transition={{ duration: 1 }}
       >
-        <div className="container-fluid p-0">
+        <div className="container-fluid  p-0">
           <div className="row align-items-center text-center text-md-start">
             <div className="col-md-5 col-12  mb-md-0">
               <h1

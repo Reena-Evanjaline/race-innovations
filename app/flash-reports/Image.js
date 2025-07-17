@@ -16,7 +16,7 @@ function Image() {
     <>
       {/* Background Image Section */}
       <motion.div
-        className="container-fluid mt-3 p-5 d-flex align-items-center"
+        className="container-fluid  p-5 d-flex align-items-center"
         style={{
           backgroundImage: 'url("/images/flash.png")',
           backgroundSize: "cover",

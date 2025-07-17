@@ -29,7 +29,7 @@ function World() {
         variants={scrollUpVariant}
         transition={{ duration: 1 }}
       >
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <div className="row align-items-center text-center text-md-start m-0">
             <motion.div
               className="col-md-4 col-12  mb-md-0 p-0"

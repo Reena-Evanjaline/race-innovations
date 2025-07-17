@@ -4,8 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Cisme() {
-  return (
-    <div className="container-fluid" style={{ backgroundColor: "#EEEEF2" }}>
+  return ( 
+    <div className="container-fluid " style={{ backgroundColor: "#EEEEF2" }}>
       <motion.div
         className="text-center"
         style={{   }}

@@ -12,7 +12,7 @@ function Indust() {
 
   return (
     <motion.div
-      className="container-fluid mt-5"
+      className="container-fluid "
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}

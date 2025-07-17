@@ -15,7 +15,7 @@ function Last() {
 
   return (
     <motion.div
-      className="container-fluid"
+      className="container-fluid "
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
       whileInView="visible"

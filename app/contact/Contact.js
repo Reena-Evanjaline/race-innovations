@@ -14,7 +14,7 @@ function Contact() {
 
   return (
     <motion.div
-      className="container-fluid mt-3 d-flex flex-column align-items-center justify-content-center position-relative"
+      className="container-fluid   d-flex flex-column align-items-center justify-content-center position-relative"
       style={{
         height: "100vh",
         width: "100%",

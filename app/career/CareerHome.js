@@ -15,7 +15,7 @@ function CareerHome() {
 
   return (
     <motion.div
-      className="container-fluid  d-flex align-items-center"
+      className="container-fluid   d-flex align-items-center"
      
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}

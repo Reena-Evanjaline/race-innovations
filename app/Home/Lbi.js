@@ -22,7 +22,7 @@ function Lbi() {
         borderRadius: "10px",
         alignItems: "center",
       }}
-      className="container-fluid mt-3"
+      className="container-fluid "
     >
       <div className="d-flex justify-content-center">
         <div className="col-md-6 text-center">

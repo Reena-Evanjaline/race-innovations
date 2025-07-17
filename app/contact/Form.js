@@ -13,7 +13,7 @@ function Form() {
 
   return (
     <motion.div
-      className="container-fluid d-flex flex-column justify-content-center align-items-center text-center" style={{ marginBottom: "100px" }}
+      className="container-fluid  d-flex flex-column justify-content-center align-items-center text-center" style={{ marginBottom: "100px" }}
      
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}

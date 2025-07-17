@@ -6,7 +6,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div
-      className="footer-hidden-mobile footer container-fluid mt-5 "
+      className="footer-hidden-mobile footer container-fluid  "
       style={{
         backgroundImage: 'url("/images/footer-bg.png")',
         backgroundSize: "cover",

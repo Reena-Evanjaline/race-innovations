@@ -16,7 +16,7 @@ function Inside() {
   return (
     <>
       <motion.div
-        className="container-fluid mt-5"
+        className="container-fluid "
         style={{
           backgroundImage: 'url("/images/liquid-bg.png")',
           backgroundSize: "cover",

@@ -34,7 +34,7 @@ function Who() {
 
       {/* Background Section */}
       <div
-        className="container-fluid"
+        className="container-fluid "
         style={{
           backgroundImage: 'url("/images/rectangle.webp")',
           backgroundSize: "cover",

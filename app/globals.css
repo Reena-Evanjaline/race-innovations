@@ -63,6 +63,7 @@
     background: white;
     min-height: 100vh;
     margin-bottom: 350px; 
+    padding-top: 50px;
   }
 
   @media (max-width: 768px) {

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Connected() {
   return (
-    <div className="container-fluid mb-5">
+    <div className="container-fluid ">
     <div className="row d-flex justify-content-center">
       <motion.div
         className="col-md-10 col-12 p-4 "
