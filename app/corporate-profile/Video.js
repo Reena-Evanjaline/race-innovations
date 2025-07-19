@@ -6,7 +6,8 @@ import { IoMdDownload } from "react-icons/io";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
-import "./video.css"; // Optional: for additional styling
+import "./video.css"; 
+import 'core-js/full/promise/with-resolvers';
 
 // Set PDF worker
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;

@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import React from 'react';
 
 
-
 import Video from "./Video";
 
 function ContactPage() {
