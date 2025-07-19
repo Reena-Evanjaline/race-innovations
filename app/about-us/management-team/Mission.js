@@ -1,26 +1,28 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 function Mission() {
-  const [hasAnimated, setHasAnimated] = useState(false);
   const slideFromBottom = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
   };
 
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid">
       <div className="row align-items-center">
+        {/* Heading */}
         <motion.div
           className="col-12 col-md-4 text-center text-md-end d-flex flex-column justify-content-center"
           initial="hidden"
-          animate={hasAnimated ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={slideFromBottom}
-          onViewportEnter={() => setHasAnimated(true)}
         >
           <h1
             className="ms-md-4"
@@ -35,28 +37,27 @@ function Mission() {
             <span style={{ color: "#293BB1" }}> Team</span>
           </h1>
         </motion.div>
+
+        {/* Image */}
         <motion.div
           className="col-12 col-md-8 d-flex justify-content-center"
           initial="hidden"
-          animate={hasAnimated ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={slideFromBottom}
-          onViewportEnter={() => setHasAnimated(true)}
         >
           <Image
             src="/images/team.webp"
             width={300}
-            height={150} 
-            className="w-100 img-fluid" 
+            height={150}
+            className="w-100 img-fluid"
             style={{
               objectFit: "cover",
-              minHeight: "150px", 
+              minHeight: "150px",
             }}
-            alt="Descriptive Alt Text"
+            alt="Management Team"
           />
         </motion.div>
-
       </div>
     </div>
   );

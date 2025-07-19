@@ -5,6 +5,7 @@ import Image from "./Image";
 import Inside from "./Inside";
 import Formats from "./Formats";
 import Last from "./Last";
+import Why from "../product/Why";
 
 
 
@@ -20,6 +21,9 @@ function Flash() {
     <Inside/>
     <Formats/>
     <Last/>
+    <div className="mt-5">
+      <Why />
+      </div>
     </div>
     <Footer/>
     </>

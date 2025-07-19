@@ -6,20 +6,26 @@ import { motion } from "framer-motion";
 function Formats() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Bottom-to-top animation for sections
+  // Section animation
   const slideFromBottom = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
-
-  // Staggered animation for list items
-  const listItemVariant = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
+    visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.15 }, // Staggered effect
-    }),
+      transition: { duration: 0.4, ease: "easeOut" }, // Faster animation
+    },
+  };
+
+  // List item staggered animation (fast)
+  const listItemVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: function (i) {
+      return {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.3, ease: "easeOut", delay: i * 0.05 }, // Fast stagger
+      };
+    },
   };
 
   return (
@@ -55,14 +61,14 @@ function Formats() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
         variants={slideFromBottom}
-        transition={{ delay: 0.2 }}
+        transition={{ delay: 0.1 }}
       >
         At Race Innovationss, we offer Flash Reports in quarterly, monthly,
         half-yearly, and yearly formats to keep you updated on the latest market
         intelligence at the frequency that best suits your needs.
       </motion.p>
 
-      {/* List */}
+      {/* List of report types */}
       <div className="d-flex flex-column align-items-center justify-content-center">
         <ul className="l">
           {[
@@ -95,9 +101,10 @@ function Formats() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               variants={listItemVariant}
-              custom={index + 1} // Custom delay per item
+              custom={index + 1}
             >
-              <strong style={{ color: "#293BB1" }}>{item.title}:</strong> {item.description}
+              <strong style={{ color: "#293BB1" }}>{item.title}:</strong>{" "}
+              {item.description}
             </motion.li>
           ))}
         </ul>

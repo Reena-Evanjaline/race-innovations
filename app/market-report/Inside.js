@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 const fadeInVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -31,7 +30,7 @@ function Inside() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.4 }} // Faster fade
       >
         <motion.h4
           style={{
@@ -44,13 +43,14 @@ function Inside() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={slideUpVariants}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 0.4, delay: 0.1 }} // Faster and slight delay
         >
           <span style={{ color: "black" }}>What’s Inside a</span>
           <span style={{ color: "#293BB1", marginLeft: "15px" }}>
             Market Report
           </span>
         </motion.h4>
+
         <div className="container mt-4">
           <div className="row justify-content-center g-1">
             {[
@@ -77,7 +77,7 @@ function Inside() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={slideUpVariants}
-                transition={{ duration: 1, delay: 0.3 * index }}
+                transition={{ duration: 0.4, delay: 0.1 * index }}
               >
                 <div
                   className="card p-3"
@@ -106,6 +106,7 @@ function Inside() {
               </motion.div>
             ))}
           </div>
+
           <div className="row justify-content-center mt-5">
             {[
               {
@@ -126,7 +127,7 @@ function Inside() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={slideUpVariants}
-                transition={{ duration: 1, delay: 0.3 * index }}
+                transition={{ duration: 0.4, delay: 0.1 * index }}
               >
                 <div
                   className="card p-3 text-center"

@@ -1,9 +1,8 @@
-"use client"; 
+"use client";
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion"; 
-
+import { motion } from "framer-motion";
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -24,7 +23,7 @@ function Who() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUpVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
       >
         <span style={{ color: "black" }}>Race</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>
@@ -34,29 +33,17 @@ function Who() {
 
       {/* Background Section */}
       <div
-        className="container-fluid "
+        className="container-fluid"
         style={{
           backgroundImage: 'url("/images/rectangle.webp")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           minHeight: "70vh",
-          padding:"0.5rem"
+          padding: "0.5rem",
         }}
       >
         <div className="container">
-          {/* Intro Text */}
-          <motion.div
-            className="text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInUpVariants}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-          
-          </motion.div>
-
           {/* First Row */}
           <motion.div
             className="row justify-content-center mt-4"
@@ -64,21 +51,24 @@ function Who() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUpVariants}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
           >
             {[
               { img: "chair.webp", text: "Incorporated in the year 2011" },
               {
                 img: "award.webp",
-                text: "Recognized, professionally acclaimed and admired player in the CV industry",
+                text:
+                  "Recognized, professionally acclaimed and admired player in the CV industry",
               },
               {
                 img: "administrator.webp",
-                text: "Unique in the industry for our adept knowledge in truck/bus/trailer applications",
+                text:
+                  "Unique in the industry for our adept knowledge in truck/bus/trailer applications",
               },
               {
                 img: "data-analytics.webp",
-                text: "Delivered more than 50 customized strategic reports and 100 market research reports",
+                text:
+                  "Delivered more than 50 customized strategic reports and 100 market research reports",
               },
             ].map((item, index) => (
               <motion.div
@@ -88,7 +78,7 @@ function Who() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={fadeInUpVariants}
-                transition={{ duration: 1, delay: 0.3 + index * 0.2 }}
+                transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
               >
                 <div className="card p-3 text-center d-flex flex-column align-items-center w-100">
                   <Image
@@ -111,20 +101,23 @@ function Who() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUpVariants}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             {[
               {
                 img: "delivery-truck.webp",
-                text: "Designed and developed various truck, bus, trailer application designs",
+                text:
+                  "Designed and developed various truck, bus, trailer application designs",
               },
               {
                 img: "team-leader.webp",
-                text: "Executed more than 10 strategic green field innovative projects",
+                text:
+                  "Executed more than 10 strategic green field innovative projects",
               },
               {
                 img: "engineer.webp",
-                text: "Employee strength of 35 members including engineers and marketing specialists",
+                text:
+                  "Employee strength of 35 members including engineers and marketing specialists",
               },
             ].map((item, index) => (
               <motion.div
@@ -134,7 +127,7 @@ function Who() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={fadeInUpVariants}
-                transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
+                transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
               >
                 <div className="card p-3 text-center d-flex flex-column align-items-center w-100">
                   <Image

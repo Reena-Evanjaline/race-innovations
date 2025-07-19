@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 const slideUpVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
@@ -15,9 +14,9 @@ function Formats() {
       className="container"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }} 
+      viewport={{ once: true, amount: 0.3 }}
       variants={slideUpVariants}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.4 }} // Faster entry
     >
       <motion.h4
         style={{
@@ -30,33 +29,35 @@ function Formats() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={slideUpVariants}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 0.4, delay: 0.1 }} // Fast with slight delay
       >
         <span style={{ color: "black" }}>Market</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>
           Report Formats
         </span>
       </motion.h4>
+
       <motion.p
         className="mt-3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={slideUpVariants}
-        transition={{ duration: 1, delay: 0.4 }}
-        style={{textAlign:"justify"}}
+        transition={{ duration: 0.4, delay: 0.2 }}
+        style={{ textAlign: "justify" }}
       >
         At Race Innovationss, we offer Flash Reports in quarterly, monthly,
         half-yearly, and yearly formats to keep you updated on the latest market
         intelligence at the frequency that best suits your needs.
       </motion.p>
+
       <motion.div
         className="d-flex flex-column align-items-center justify-content-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={slideUpVariants}
-        transition={{ duration: 1, delay: 0.6 }}
+        transition={{ duration: 0.4, delay: 0.3 }}
       >
         <ul>
           <li className="mt-3">

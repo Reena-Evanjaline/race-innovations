@@ -15,7 +15,7 @@ function PartnerShip() {
     <Banner/>
     </div>
       <Footer/>
-      
+     
     </>
   );
 }

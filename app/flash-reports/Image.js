@@ -3,20 +3,24 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-function Image() {
+function ImageSection() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Bottom-to-top animation
+  // Fast animation from bottom
   const slideFromBottom = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: "easeOut" }, // 🔧 FAST animation
+    },
   };
 
   return (
     <>
       {/* Background Image Section */}
       <motion.div
-        className="container-fluid  p-5 d-flex align-items-center"
+        className="container-fluid p-5 d-flex align-items-center"
         style={{
           backgroundImage: 'url("/images/flash.png")',
           backgroundSize: "cover",
@@ -33,7 +37,6 @@ function Image() {
       >
         <div className="container">
           <div className="row align-items-center text-center">
-            {/* Title */}
             <motion.h1
               className="ms-md-4"
               style={{
@@ -43,7 +46,9 @@ function Image() {
               variants={slideFromBottom}
             >
               <span style={{ color: "black" }}>Flash</span>
-              <span style={{ color: "black", marginLeft: "15px" }}>Reports</span>
+              <span style={{ color: "black", marginLeft: "15px" }}>
+                Reports
+              </span>
             </motion.h1>
           </div>
         </div>
@@ -57,21 +62,20 @@ function Image() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
         variants={slideFromBottom}
-        onViewportEnter={() => setHasAnimated(true)}
       >
-        {/* Subheading */}
-        
-
-        {/* Description */}
         <motion.p className="mt-4" variants={slideFromBottom}>
-          In today's fast-moving business environment, timely intelligence is the key to staying ahead. 
-          Race Innovationss Flash Reports provide quick, actionable insights to help businesses make informed 
-          decisions—faster. Designed for executives, investors, and decision-makers, our concise, data-driven 
-          reports deliver the latest market trends, competitive shifts, financial movements, and emerging innovations in your industry.
+          In today's fast-moving business environment, timely intelligence is
+          the key to staying ahead.{" "}
+          <strong>Race Innovationss Flash Reports</strong> provide quick,
+          actionable insights to help businesses make informed decisions—faster.
+          Designed for executives, investors, and decision-makers, our concise,
+          data-driven reports deliver the latest market trends, competitive
+          shifts, financial movements, and emerging innovations in your
+          industry.
         </motion.p>
       </motion.div>
     </>
   );
 }
 
-export default Image;
+export default ImageSection;

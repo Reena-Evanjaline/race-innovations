@@ -4,6 +4,7 @@ import React from 'react';
 import Contact from "./Contact";
 import Office from "./Office";
 import Form from "./Form";
+import Why from "../product/Why";
 
 
 function ContactPage() {
@@ -14,6 +15,9 @@ function ContactPage() {
     <Contact/>
     <Office/>
     <Form/>
+    <div className="mt-5">
+      <Why />
+      </div>
     </div>
       <Footer />
     </>

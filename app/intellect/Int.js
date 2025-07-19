@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
@@ -18,7 +19,7 @@ function Int() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
           whileHover={{ scale: 1.1 }}
         >
           <Image
@@ -41,9 +42,9 @@ function Int() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
         >
-          <p style={{textAlign:"justify"}}>
+          <p style={{ textAlign: "justify" }}>
             “Intellect” is one of the core solution offerings of RACE. Our
             strong network of market research and consulting team continuously
             tracks the Indian, global automotive market to provide clients with
@@ -54,46 +55,40 @@ function Int() {
           </p>
         </motion.div>
       </div>
+
       <h1 className="text-center">
         <span style={{ color: "black" }}>Unlock Actionable </span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>Insights with RACE</span>
-
       </h1>
-      <p style={{textAlign:"justify"}}>
+
+      <p style={{ textAlign: "justify" }}>
         At RACE, we go beyond data—we decode your business challenges to deliver
-        powerful insights that drive growth and success. Our expertise lies in
-        providing tailored solutions, equipping you with the right intelligence
-        to make informed, high-impact decisions. Our research team operates at
-        the forefront of industry trends, gathering real-time field data through
-        an extensive network of internal and external associates. With rigorous
-        sampling techniques and advanced statistical methodologies, we ensure
-        optimal accuracy and minimal margin of error, delivering insights you
-        can trust. Every research project undergoes stringent quality checks,
-        aligning with internationally recognised standards and tailored to meet
-        your specific business needs. Backed by a team of highly skilled
-        analysts, senior industry consultants, and research directors, we are
-        committed to delivering accurate, unbiased, and comprehensive reports.
-        Partner with RACE for research that not only informs but empowers your
-        business strategy
+        powerful insights that drive growth and success...
       </p>
+
       <motion.h1
         className="text-center"
-        style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: "bold" }}
+        style={{
+          fontSize: "clamp(2rem, 5vw, 3rem)",
+          fontWeight: "bold",
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
-        transition={{ duration: 1, delay: 0.4 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
       >
         Features
       </motion.h1>
+
       <motion.div
-        className="row  text-start" style={{textAlign:"justify"}}
+        className="row text-start"
+        style={{ textAlign: "justify" }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
-        transition={{ duration: 1, delay: 0.6 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
       >
         {[
           "Comprehensive Data Sources – Insights from OEMs, dealerships, application builders, and Vahan dashboard.",
@@ -113,33 +108,16 @@ function Int() {
             key={index}
             className="col-12 col-md-4"
             variants={fadeInUp}
-            transition={{ duration: 1, delay: 0.7 + index * 0.1 }}
+            transition={{ duration: 0.3, delay: 0.25 + index * 0.05 }}
           >
             <ul className="ps-3">
-              <motion.li
-                className=""
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.li whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                 {feature}
               </motion.li>
             </ul>
           </motion.div>
         ))}
       </motion.div>
-
-
-      <motion.h1
-        className="text-center "
-        style={{fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: "bold", color: "#293BB1" }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-        transition={{ duration: 1, delay: 1 }}
-      >
-
-      </motion.h1>
     </div>
   );
 }

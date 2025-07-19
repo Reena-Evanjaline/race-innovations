@@ -1,7 +1,8 @@
 "use client";
-import "./market.css"
+import "./market.css";
 import React from "react";
 import { motion } from "framer-motion";
+
 const fadeInVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -22,13 +23,13 @@ function Image() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-         height: "50vh",
+          height: "50vh",
         }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.4 }} // Faster fade
       >
         <div className="container">
           <div className="row align-items-center text-center">
@@ -37,7 +38,7 @@ function Image() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={slideUpVariants}
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.1 }} // Fast + light delay
             >
               <h1
                 className="ms-md-4"
@@ -62,7 +63,7 @@ function Image() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={slideUpVariants}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
       >
         <motion.h4
           style={{
@@ -75,16 +76,17 @@ function Image() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={slideUpVariants}
-          transition={{ duration: 1, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
         ></motion.h4>
+
         <motion.p
           className="mt-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={slideUpVariants}
-          transition={{ duration: 1, delay: 0.8 }}
-          style={{textAlign:"justify"}}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          style={{ textAlign: "justify" }}
         >
           In today's fast-moving business environment, timely intelligence is
           the key to staying ahead. Race Innovationss Flash Reports provide
@@ -95,7 +97,6 @@ function Image() {
           innovations in your industry.
         </motion.p>
       </motion.div>
-     
     </>
   );
 }

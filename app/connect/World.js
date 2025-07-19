@@ -20,24 +20,24 @@ const scrollUpVariants = {
 function World() {
   return (
     <>
+      {/* Hero Section */}
       <motion.div
-        className="  p-3 d-flex align-items-center p-0"
-
+        className="p-3 d-flex align-items-center p-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={scrollUpVariant}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.4 }}
       >
-        <div className="container-fluid ">
+        <div className="container-fluid">
           <div className="row align-items-center text-center text-md-start m-0">
             <motion.div
-              className="col-md-4 col-12  mb-md-0 p-0"
+              className="col-md-4 col-12 mb-md-0 p-0"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={scrollUpVariant}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.4 }}
             >
               <h1
                 className="ms-md-4"
@@ -46,30 +46,32 @@ function World() {
                 <span style={{ color: "#293BB1" }}>Connect</span>
               </h1>
             </motion.div>
+
             <motion.div
               className="col-md-8 col-12 p-0 m-0"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={scrollUpVariants}
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
             >
-             
-              <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
+              <div style={{ position: "relative", paddingTop: "56.25%", width: "100%" }}>
                 <ReactPlayer
-                 url="https://youtu.be/AZwxqB1Q40I?si=AeOCwIcCD3JW5oHD"
+                  url="https://youtu.be/AZwxqB1Q40I?si=AeOCwIcCD3JW5oHD"
                   controls
                   playing
                   muted
                   width="100%"
                   height="100%"
-                  style={{ position: 'absolute', top: 0, left: 0 }}
+                  style={{ position: "absolute", top: 0, left: 0 }}
                 />
               </div>
             </motion.div>
           </div>
         </div>
       </motion.div>
+
+      {/* Navigation Bar */}
       <motion.div
         className="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 text-center"
         style={{ backgroundColor: "#676A6E", color: "white" }}
@@ -77,7 +79,7 @@ function World() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={scrollUpVariants}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
       >
         {[
           { name: "Technic", link: "/technic" },
@@ -99,7 +101,7 @@ function World() {
       </motion.div>
 
       {/* Content Section */}
-      <div className="container ">
+      <div className="container">
         <div className="row align-items-center text-center text-md-start">
           <motion.div
             className="col-md-4 col-12 p-0 m-0"
@@ -107,7 +109,7 @@ function World() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={scrollUpVariant}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             whileHover={{ scale: 1.1 }}
           >
             <Image
@@ -130,7 +132,7 @@ function World() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={scrollUpVariant}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
             <p style={{ textAlign: "justify" }}>
               RACE begins with a comprehensive market analysis to identify

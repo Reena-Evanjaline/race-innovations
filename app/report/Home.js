@@ -5,6 +5,7 @@ import ReportHome from "./ReportHome";
 import Research from "./Research";
 import Industries from "./Industries";
 import Choose from "./Choose";
+import Why from "../product/Why";
 
 
 
@@ -26,6 +27,9 @@ function Report() {
     <Research/>
     <Industries/>
     <Choose/>
+    <div className="mt-5">
+      <Why />
+      </div>
     </div>
     <Footer/>
     </>

@@ -1,86 +1,85 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 function Features() {
-  const [hasAnimated, setHasAnimated] = useState(false);
-
   const slideFromBottom = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
+
   const listItemVariant = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.15 },
+      transition: {
+        duration: 0.25,
+        ease: "easeOut",
+        delay: i * 0.05,
+      },
     }),
   };
+
+  const features = [
+    "Turning circle diagrams with vehicle simulation along with load",
+    "Railway crossing related obstruction details",
+    "LT/HT cable, tree branches, signboards, overhead bridge height constraints",
+    "Other observations like petrol pump, toll plaza, parking points, SOS- Emergency services, dhaba, traffic congestion locations, pothole details, NH/SH identification, major city entry/exit",
+    "Critical bridge calculations*",
+    "Vehicle stability calculation when loaded*",
+    "Load securing guidelines, suggestion for vehicle modification to suit loads, new vehicle design for specific cargo movement*",
+    "Gradient calculations*",
+  ];
 
   return (
     <motion.div
       className="container"
       initial="hidden"
-      animate={hasAnimated ? "visible" : "hidden"}
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={slideFromBottom}
-      onViewportEnter={() => setHasAnimated(true)}
     >
       <div className="row">
         <motion.div
           className="col-md-6"
-          initial="hidden"
-          animate={hasAnimated ? "visible" : "hidden"}
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
           variants={slideFromBottom}
-          onViewportEnter={() => setHasAnimated(true)}
         >
-          <h1 style={{  fontSize: "clamp(2rem, 5vw, 3rem)", whiteSpace: "nowrap" }} className="text-center">
+          <h1
+            className="text-center"
+            style={{ fontSize: "clamp(2rem, 5vw, 3rem)", whiteSpace: "nowrap" }}
+          >
             <span style={{ color: "black" }}>Key</span>
             <span style={{ color: "#293BB1" }}> Features</span>
           </h1>
 
-          <ul style={{textAlign:"justify"}}>
-            {[
-              "Turning circle diagrams with vehicle simulation along with load",
-              "Railway crossing related obstruction details",
-              "LT/HT cable, tree branches, signboards, overhead bridge height constraints",
-              "Other observations like petrol pump, toll plaza, parking points, SOS- Emergency services, dhaba, traffic congestion locations, pothole details, NH/SH identification, major city entry/exit",
-              "Critical bridge calculations*",
-              "Vehicle stability calculation when loaded*",
-              "Load securing guidelines, suggestion for vehicle modification to suit loads, new vehicle design for specific cargo movement*",
-              "Gradient calculations*",
-            ].map((feature, index) => (
+          <ul style={{ textAlign: "justify" }}>
+            {features.map((feature, index) => (
               <motion.li
                 key={index}
+                custom={index}
                 initial="hidden"
-                animate={hasAnimated ? "visible" : "hidden"}
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 variants={listItemVariant}
-                custom={index + 1}
-                style={{ marginBottom: "15px" }} 
+                style={{ marginBottom: "15px" }}
               >
                 {feature}
               </motion.li>
             ))}
           </ul>
-
         </motion.div>
+
         <motion.div
-          className="col-md-6  mb-0"
-          initial="hidden"
-          animate={hasAnimated ? "visible" : "hidden"}
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          className="col-md-6 mb-0"
           variants={slideFromBottom}
-          transition={{ duration: 1, delay: 0.5 }}
-          onViewportEnter={() => setHasAnimated(true)}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Image
             src="/images/survey.png"

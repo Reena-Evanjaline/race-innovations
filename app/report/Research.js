@@ -6,10 +6,13 @@ import { motion } from "framer-motion";
 function Research() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Slide-up animation
-  const slideFromBottom = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  const fastSlideFromBottom = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
   };
 
   return (
@@ -35,8 +38,8 @@ function Research() {
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={slideFromBottom}
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fastSlideFromBottom}
           onViewportEnter={() => setHasAnimated(true)}
         >
           <span style={{ color: "black" }}>Our Core</span>
@@ -86,8 +89,8 @@ function Research() {
                   initial="hidden"
                   animate={hasAnimated ? "visible" : "hidden"}
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.5 }}
-                  variants={slideFromBottom}
+                  viewport={{ once: true, amount: 0.4 }}
+                  variants={fastSlideFromBottom}
                   onViewportEnter={() => setHasAnimated(true)}
                 >
                   <div

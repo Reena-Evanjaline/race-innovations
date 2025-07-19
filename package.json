@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.750.0",
+    "@aws-sdk/client-ses": "^3.848.0",
     "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "framer-motion": "^12.4.7",
+    "html-to-text": "^9.0.5",
     "jose": "^6.0.10",
     "libreoffice-convert": "^1.6.1",
     "lucide-react": "^0.475.0",

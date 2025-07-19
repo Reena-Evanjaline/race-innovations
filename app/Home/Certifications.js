@@ -19,13 +19,13 @@ function Certifications() {
   ];
 
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid">
       <div className="row text-center">
         <h1>
           <span style={{ color: "black" }}>Our</span>{" "}
           <span style={{ color: "#293BB1" }}>Certifications</span>
         </h1>
-        <p className="">
+        <p>
           Race Innovationss Pvt. Ltd is ISO27001, ISO9001, and CMMI Level 3
           Certified Company
         </p>
@@ -36,8 +36,9 @@ function Certifications() {
           <Swiper
             spaceBetween={20}
             loop={true}
+            speed={600} // Faster slide transition
             autoplay={{
-              delay: 2000,
+              delay: 1000, // Faster switch between slides
               disableOnInteraction: false,
             }}
             modules={[Autoplay]}
@@ -57,9 +58,9 @@ function Certifications() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: "#fff", 
-                    borderRadius: "8px",   
-                    boxShadow: "0 0 5px rgba(0,0,0,0.1)", 
+                    backgroundColor: "#fff",
+                    borderRadius: "8px",
+                    boxShadow: "0 0 5px rgba(0,0,0,0.1)",
                   }}
                 >
                   <Image

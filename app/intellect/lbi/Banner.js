@@ -27,7 +27,8 @@ function Banner() {
               initial="hidden"
               animate="visible"
               variants={slideUpOnce}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+
             >
               <h1
                 className="ms-md-4"
@@ -71,7 +72,8 @@ function Banner() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={slideUpOnce} 
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+
       >
         {[
           { name: "Technic", link: "/technic" },
@@ -85,7 +87,8 @@ function Banner() {
             href={item.link}
             className="m-2 text-white text-decoration-none"
             whileHover={{ scale: 1.2 }}
-            transition={{ duration: 0.3 }}
+           transition={{ duration: 0.2 }}
+
           >
             {item.name}
           </motion.a>

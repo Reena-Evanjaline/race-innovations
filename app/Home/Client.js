@@ -35,31 +35,21 @@ const ClientSection = () => {
   ];
 
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid">
       <div className="partner-ship py-4">
         <Swiper
           spaceBetween={20}
-          slidesPerView={1}
-          slidesPerGroup={1}
           loop={true}
+          speed={800} // Optional: increase speed of each transition
           autoplay={{
-            delay: 2000,
+            delay: 1000, // Faster transition (was 2000ms)
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
           breakpoints={{
-            576: {
-              slidesPerView: 1,
-              slidesPerGroup: 1,
-            },
-            768: {
-              slidesPerView: 2,
-              slidesPerGroup: 1,
-            },
-            992: {
-              slidesPerView: 4,
-              slidesPerGroup: 1,
-            },
+            576: { slidesPerView: 2, slidesPerGroup: 1 },
+            768: { slidesPerView: 3, slidesPerGroup: 1 },
+            992: { slidesPerView: 5, slidesPerGroup: 1 },
           }}
         >
           {images.map((src, index) => (

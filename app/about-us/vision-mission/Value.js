@@ -23,14 +23,14 @@ function Value() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUpVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
       >
         <span style={{ color: "black" }}>Race</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>Values</span>
       </motion.h1>
 
       <div
-        className="container-fluid "
+        className="container-fluid"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -46,7 +46,7 @@ function Value() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeInUpVariants}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               {[
                 {
@@ -72,7 +72,7 @@ function Value() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUpVariants}
-                  transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
                   <div className="col-md-4 text-center">
                     <Image
@@ -99,7 +99,7 @@ function Value() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeInUpVariants}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               {[
                 {
@@ -125,7 +125,7 @@ function Value() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUpVariants}
-                  transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
                   <div className="col-md-4 text-center">
                     <Image

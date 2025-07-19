@@ -23,7 +23,7 @@ function Last() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInVariants}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.4 }} // faster fade
     >
       {/* Section Title */}
       <motion.h5
@@ -33,7 +33,7 @@ function Last() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={slideUpVariants}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 0.4, delay: 0.1 }} // faster + light delay
       >
         <span style={{ color: "black" }}>Why</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>
@@ -51,7 +51,7 @@ function Last() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={slideUpVariants}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
             {[
               {
@@ -85,7 +85,7 @@ function Last() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={slideUpVariants}
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
             <Image
               src="/images/notes.png"

@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 function Lbi() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true }}
       style={{
         width: "100%",
-        height: "100vh",
+        minHeight: "100vh",
         background: `url('/images/gg.webp') no-repeat center center`,
         backgroundSize: "cover",
         display: "flex",
@@ -22,40 +22,39 @@ function Lbi() {
         borderRadius: "10px",
         alignItems: "center",
       }}
-      className="container-fluid "
+      className="container-fluid"
     >
-      <div className="d-flex justify-content-center">
+      <motion.div
+        className="d-flex justify-content-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         <div className="col-md-6 text-center">
-          {" "}
-          {/* Adjust column width as needed */}
           <h1 style={{ color: "#293BB1" }}>
             LBI-Route Survey For
             <br /> Over Dimensional Cargo (ODC)
           </h1>
           <p className="mt-3" style={{ color: "#555555" }}>
-            Location Based Intelligence emphasis on facilitating hindrance-free
+            Location Based Intelligence emphasizes facilitating hindrance-free
             movement of goods by conducting route surveys by a team of experts.
-            LBI team expertise in providing reports with recommendations which
-            help the users to move freely without any difficulties. LBI uses
-            advanced technology and applications to increase accuracy and
-            reliability. RACE has a professional engineering & civil team to
-            execute route surveys, identify the shortest feasible routes, load
-            securing, vehicle stability calculations, determining the capacity
-            of bridges, road filling information with civil costs for the
-            purpose of safe & economical transportation of cargo. Also, the RACE
-            Team is well-suited to support many industries, logistics &
-            transportation companies in designing specialty trailers specific to
-            their cargo/applications.
+            The LBI team provides recommendations to help users move freely,
+            using advanced technology to increase accuracy and reliability.
+            RACE's engineering and civil teams execute surveys, assess road
+            feasibility, and calculate logistics like bridge capacity and
+            vehicle stability. RACE also supports industries and logistics firms
+            with custom trailer design and safe, cost-effective cargo transport.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       <motion.button
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
-        className="btn btn-outline-primary"
+        className="btn btn-outline-primary mt-3"
         style={{
           width: "198.79px",
           height: "45.72px",

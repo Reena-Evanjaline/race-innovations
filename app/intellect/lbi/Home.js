@@ -4,6 +4,7 @@ import React from "react";
 import Banner from "./Banner";
 import Video from "./Video";
 import Features from "./Features";
+import Why from "@/app/product/Why";
 
 function Lbi() {
   return (
@@ -13,6 +14,9 @@ function Lbi() {
       <Banner />
       <Video />
       <Features />
+      <div className="mt-5">
+      <Why />
+      </div>
       </div>
       <Footer />
     </>

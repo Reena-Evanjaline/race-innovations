@@ -19,34 +19,42 @@ const scrollUpVariants = {
 function First() {
   return (
     <>
-      <div
-        className="container-fluid  p-0 d-flex align-items-center"
-      >
+      <div className="container-fluid p-0 d-flex align-items-center">
         <div className="container-fluid p-0">
           <div className="row align-items-center text-center text-md-center m-0">
             <motion.div
-              className="col-md-4 col-12  mb-md-0"
+              className="col-md-4 col-12 mb-md-0"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.3 }}
             >
               <h1
                 className="ms-md-4"
-                style={{ fontSize: "clamp(2rem, 5vw, 3rem)", whiteSpace: "nowrap" }}
+                style={{
+                  fontSize: "clamp(2rem, 5vw, 3rem)",
+                  whiteSpace: "nowrap",
+                }}
               >
-                <span style={{ color: "#293BB1" }} className="text-center">Intellect</span>
+                <span style={{ color: "#293BB1" }}>Intellect</span>
               </h1>
             </motion.div>
+
             <motion.div
               className="col-md-8 col-12 p-0 m-0"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <div style={{ position: 'relative', paddingTop: '56.25%' /* 16:9 ratio */, width: '100%' }}>
+              <div
+                style={{
+                  position: "relative",
+                  paddingTop: "56.25%", // 16:9
+                  width: "100%",
+                }}
+              >
                 <ReactPlayer
                   url="https://youtu.be/AZwxqB1Q40I?si=AeOCwIcCD3JW5oHD"
                   controls
@@ -54,10 +62,9 @@ function First() {
                   muted
                   width="100%"
                   height="100%"
-                  style={{ position: 'absolute', top: 0, left: 0 }}
+                  style={{ position: "absolute", top: 0, left: 0 }}
                 />
               </div>
-
             </motion.div>
           </div>
         </div>
@@ -71,7 +78,7 @@ function First() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={scrollUpVariants}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
       >
         {[
           { name: "Technic", link: "/technic" },
@@ -84,8 +91,8 @@ function First() {
             key={index}
             href={item.link}
             className="m-2 text-white text-decoration-none"
-            whileHover={{ scale: 1.2 }}
-            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2 }}
           >
             {item.name}
           </motion.a>

@@ -24,7 +24,7 @@ function Philosophy() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUpVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
       >
         <span style={{ color: "black" }}>Race</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>Philosophy</span>
@@ -39,7 +39,7 @@ function Philosophy() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUpVariants}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             <Image
               src="/images/research.webp"
@@ -63,7 +63,7 @@ function Philosophy() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUpVariants}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <p>
               RACE Team is a well-renowned name in the space of Commercial

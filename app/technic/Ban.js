@@ -15,7 +15,7 @@ function Ban() {
       <div
         className="container-fluid  p-0 d-flex align-items-center"        
       >
-        <div className="container p-0"> 
+        <div className="container p-0 pt-3"> 
           <div className="row align-items-center text-center text-md-start m-0">
             <motion.div
               className="col-md-4 col-12 mb-md-0"

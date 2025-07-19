@@ -7,15 +7,37 @@ import { motion } from "framer-motion";
 function Last() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Bottom-to-top animation
   const slideFromBottom = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: "easeOut" }, // Faster duration
+    },
   };
+
+  const reasons = [
+    {
+      title: "Industry-Specific Expertise",
+      text: "Proven experience across diverse sectors.",
+    },
+    {
+      title: "Custom Research Solutions",
+      text: "Tailored studies designed to meet your unique business needs.",
+    },
+    {
+      title: "Global & Regional Coverage",
+      text: "Market intelligence spanning international and local markets.",
+    },
+    {
+      title: "Data-Driven Decision Making",
+      text: "Actionable insights backed by advanced analytics.",
+    },
+  ];
 
   return (
     <motion.div
-      className="container-fluid "
+      className="container-fluid"
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
       whileInView="visible"
@@ -43,22 +65,18 @@ function Last() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={slideFromBottom}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
-            {[
-              { title: "Industry-Specific Expertise", text: "Proven experience across diverse sectors." },
-              { title: "Custom Research Solutions", text: "Tailored studies designed to meet your unique business needs." },
-              { title: "Global & Regional Coverage", text: "Market intelligence spanning international and local markets." },
-              { title: "Data-Driven Decision Making", text: "Actionable insights backed by advanced analytics." },
-            ].map((item, index) => (
+            {reasons.map((item, index) => (
               <motion.p
                 key={index}
+                className="mb-3"
                 initial="hidden"
                 animate={hasAnimated ? "visible" : "hidden"}
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={slideFromBottom}
-                transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
+                transition={{ duration: 0.3, delay: index * 0.1 + 0.1 }} // Faster stagger
               >
                 <strong style={{ color: "#293BB1" }}>{item.title}</strong> – {item.text}
               </motion.p>
@@ -67,26 +85,25 @@ function Last() {
 
           {/* Image Section */}
           <motion.div
-            className="col-md-4"
+            className="col-md-4 text-center"
             initial="hidden"
             animate={hasAnimated ? "visible" : "hidden"}
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={slideFromBottom}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <Image
               src="/images/notes.png"
               width={250}
               height={250}
-              className="card-img-top"
+              alt="Why Choose Us"
               style={{
                 width: "80%",
                 height: "auto",
-                margin: "0 auto",
                 objectFit: "contain",
+                margin: "0 auto",
               }}
-              alt="Who We Are"
             />
           </motion.div>
         </div>

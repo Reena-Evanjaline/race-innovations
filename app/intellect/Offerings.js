@@ -2,20 +2,18 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  BarChart, 
-  Car, 
-  ClipboardList, 
-  FileText, 
-  Users, 
-  Lightbulb, 
-  TrendingUp, 
-  Briefcase, 
-  Layers, 
-  Grid, 
-  Activity, 
-  Settings 
-} from "lucide-react"; // Import relevant icons
+import {
+  BarChart,
+  Car,
+  ClipboardList,
+  FileText,
+  Users,
+  Lightbulb,
+  TrendingUp,
+  Briefcase,
+  Grid,
+  Activity,
+} from "lucide-react";
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -85,7 +83,7 @@ function Offerings() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUpVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
       >
         <span style={{ color: "black" }}>Race</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>Offerings</span>
@@ -99,10 +97,9 @@ function Offerings() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           minHeight: "82vh",
-          
         }}
       >
-        <div className="container" style={{marginBottom:"100px"}}>
+        <div className="container" style={{ marginBottom: "100px" }}>
           <div className="row">
             {offeringsData.map((item, index) => (
               <motion.div
@@ -112,18 +109,11 @@ function Offerings() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={fadeInUpVariants}
-                transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                transition={{ duration: 0.3, delay: 0.1 + index * 0.05 }}
               >
-                <motion.div
-                  className="row align-items-center mt-4"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
-                  variants={fadeInUpVariants}
-                  transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
-                >
+                <div className="row align-items-center mt-4">
                   <div className="col-md-4 text-center">
-                    <item.icon size={100} color="#3647b5" /> 
+                    <item.icon size={80} color="#3647b5" />
                   </div>
                   <div className="col-md-8 d-flex flex-column">
                     <h5 style={{ color: "#3647b5", marginBottom: "5px" }}>
@@ -131,7 +121,7 @@ function Offerings() {
                     </h5>
                     <p style={{ margin: 0 }}>{item.text}</p>
                   </div>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>

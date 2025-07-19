@@ -4,17 +4,21 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const scrollUpVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 80 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 function Deliverable() {
   return (
-    <div className="container" style={{marginBottom:"100px",textAlign:"justify"}}>
-      <h1 style={{ color: "#293bb1" }} className="text-center">
+    <div className="container" style={{ marginBottom: "100px", textAlign: "justify" }}>
+      <h1 style={{ color: "#293bb1" }} className="text-center mb-4">
         Deliverable
       </h1>
-      <div className="row justify-content-center ">
+      <div className="row justify-content-center">
         {[
           {
             title: "Application & Interface Engineering",
@@ -36,9 +40,7 @@ function Deliverable() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={scrollUpVariants}
-            transition={{ duration: 1, delay: index * 0.2 }}
           >
-            {/* Card Wrapper */}
             <div
               className="d-flex flex-column align-items-center"
               style={{
@@ -50,7 +52,6 @@ function Deliverable() {
                 padding: "15px",
               }}
             >
-              {/* Inner White Card */}
               <div
                 style={{
                   width: "90%",

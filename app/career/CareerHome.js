@@ -7,16 +7,18 @@ import { motion } from "framer-motion";
 function CareerHome() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Bottom-to-top animation
   const slideFromBottom = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" }, // ✅ Faster animation
+    },
   };
 
   return (
     <motion.div
-      className="container-fluid   d-flex align-items-center"
-     
+      className="container-fluid d-flex align-items-center"
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
       whileInView="visible"
@@ -28,17 +30,17 @@ function CareerHome() {
         <div className="row align-items-center text-center text-md-start">
           {/* Text Section */}
           <motion.div
-            className="col-md-4 col-12  mb-md-0"
+            className="col-md-4 col-12 mb-md-0"
             initial="hidden"
             animate={hasAnimated ? "visible" : "hidden"}
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={slideFromBottom}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <h1
               className="ms-md-4"
-              style={{ fontSize: "3.5rem", whiteSpace: "nowrap" }}
+              style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", whiteSpace: "nowrap" }}
             >
               <span style={{ color: "#293BB1" }}>Careers</span>
             </h1>
@@ -52,7 +54,7 @@ function CareerHome() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={slideFromBottom}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             <Image
               src="/images/career-bg.webp"

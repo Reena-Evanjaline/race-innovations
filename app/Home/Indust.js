@@ -12,44 +12,44 @@ function Indust() {
 
   return (
     <motion.div
-      className="container-fluid "
+      className="container-fluid"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.4, ease: "easeOut" }} // faster
       viewport={{ once: true }}
     >
       <div className="row align-items-center">
-        {/* Video Section - Full width on mobile, 50% on medium+ screens */}
+        {/* Video Section */}
         <div className="col-12 col-md-6 mb-4">
           <div className="ratio ratio-16x9">
             <motion.div
               className="w-100 d-flex justify-content-center"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 0.4, ease: "easeOut" }} // faster
               viewport={{ once: true }}
             >
               {isMounted && (
                 <ReactPlayer
                   url="https://youtu.be/Zz2KlzvTqFY"
                   controls
-                  playing={true}
-                  muted={true}
+                  playing
+                  muted
                   width="100%"
-                  height="auto" // ✅ Fix for mobile responsiveness
+                  height="auto"
                 />
               )}
             </motion.div>
           </div>
         </div>
 
-        {/* Text Section - Full width on mobile, 50% on medium+ screens */}
+        {/* Text Section */}
         <div className="col-12 col-md-6 mt-1 text-center text-md-start">
           <motion.h1
             className="d-flex justify-content-center justify-content-md-start"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }} // faster
             viewport={{ once: true }}
           >
             <span className="me-2" style={{ color: "black" }}>Our</span>
@@ -57,10 +57,11 @@ function Indust() {
           </motion.h1>
 
           <motion.p
-            className="text-muted px-3 px-md-0 " style={{textAlign:"justify"}}
+            className="text-muted px-3 px-md-0"
+            style={{ textAlign: "justify" }}
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // faster
             viewport={{ once: true }}
           >
             RACE has a global presence, spanning Europe, East, West, and North Africa, North and Latin America, Korea, China, the UK, as well as other Asian and SAARC nations, with its headquarters in India. Our international reach, application-focused approach, and deep expertise in the automotive, farm equipment and implements, construction, and mining sectors make us the ideal local partner for OEMs, vehicle aggregate manufacturers, fleet operators, and logistics service providers.
@@ -78,7 +79,7 @@ function Indust() {
             }}
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            transition={{ duration: 0.3, ease: "easeOut", delay: 0.3 }} // faster
             viewport={{ once: true }}
           >
             GET STARTED <i className="bi bi-arrow-right ms-2"></i>

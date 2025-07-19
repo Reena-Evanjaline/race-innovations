@@ -4,6 +4,7 @@ import React from 'react';
 import Mission from './Mission';
 import Manage from './Manage';
 import Message from "./Message";
+import Why from "@/app/product/Why";
 
 
 function About() {
@@ -13,6 +14,9 @@ function About() {
     <div className="main-content">
       <Mission />
       <Manage/>
+      <div className="mt-5">
+      <Why />
+      </div>
       </div>
       {/* <Message/> */}
       <Footer/>

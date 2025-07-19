@@ -4,6 +4,7 @@ import React from 'react';
 import First from "./First";
 import Int from "./Int";
 import Offerings from "./Offerings";
+import Why from "../product/Why";
 
 
 
@@ -17,6 +18,9 @@ function Intellect() {
      <First/>
      <Int/>
      <Offerings/>
+     <div className="mt-5">
+      <Why />
+      </div>
      </div>
       <Footer/>
       

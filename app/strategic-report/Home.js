@@ -5,6 +5,7 @@ import Landing from "./Landing";
 import Center from "./Center";
 import Cover from "./Cover";
 import Final from "./Final";
+import Why from "../product/Why";
 
 
 
@@ -19,6 +20,9 @@ function Strategies() {
     <Center/>
     <Cover/>
     <Final/>
+    <div className="mt-5">
+      <Why />
+      </div>
     </div>
     <Footer/>
     </>

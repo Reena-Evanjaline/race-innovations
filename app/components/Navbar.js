@@ -217,6 +217,15 @@ const Navbar = () => {
                   IT Services
                 </Link>
               </li>
+               <li className="nav-item ms-5">
+                <Link
+                  className={`nav-link menus ${styles.navbarCustom}`}
+                  href="/logistics"
+                  style={{ color: "#293BB1" }}
+                >
+                  ODC Logistics
+                </Link>
+              </li>
             </ul>
             <div className="d-flex">
               <a
@@ -489,6 +498,16 @@ const Navbar = () => {
                     IT Services
                   </Link>
                 </li>
+                 <li className="nav-item ms-5">
+                <Link
+                  className={`nav-link menus ${styles.navbarCustom}`}
+                  href="/logistics"
+                  onClick={handleOffcanvasHide}
+                  style={{ color: "#293BB1" }}
+                >
+                  ODC Logistics
+                </Link>
+              </li>
                 {/* <li className="nav-item ms-3">
                   <a
                     className={`nav-link menus ${styles.navbarCustom}`}
@@ -545,7 +564,7 @@ const Navbar = () => {
           
           <div className={styles.mobile_navbar}>
             <div className={styles.navigation}>
-              <Link href="" style={{ textDecoration: "none" }}>
+              <Link href="https://raceautoanalytics.com/" style={{ textDecoration: "none" }}>
                 <div className={styles.navItem}>
                   <MdAnalytics
                     color={iconColor}

@@ -1,6 +1,6 @@
 "use client";
-import ReactPlayer from "react-player";
 import React from "react";
+import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
 
 const slideUpOnce = {
@@ -18,15 +18,14 @@ function Front() {
     <>
       <motion.div
         className="container-fluid p-4 d-flex align-items-center"
-
         initial="hidden"
         animate="visible"
         variants={slideUpOnce}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
       >
-        <div className="container-fluid  p-0">
+        <div className="container-fluid p-0">
           <div className="row align-items-center text-center text-md-start">
-            <div className="col-md-5 col-12  mb-md-0">
+            <div className="col-md-5 col-12 mb-md-0">
               <h1
                 className="ms-md-4 position-relative"
                 style={{
@@ -45,7 +44,7 @@ function Front() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={scrollUpVariants}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
               >
                 <div
                   style={{
@@ -55,17 +54,7 @@ function Front() {
                     borderRadius: "10px",
                   }}
                 >
-                  {/* <ReactPlayer
-                    url="https://youtu.be/p0I7nn9Ye_s?feature"
-                    controls
-                    playing
-                    muted
-                    width="100%"
-                    height="100%"
-                    style={{ objectFit: "cover" }}
-                  /> */}
-
-                  <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
+                  <div style={{ position: "relative", paddingTop: "56.25%", width: "100%" }}>
                     <ReactPlayer
                       url="https://youtu.be/p0I7nn9Ye_s?feature"
                       controls
@@ -73,7 +62,7 @@ function Front() {
                       muted
                       width="100%"
                       height="100%"
-                      style={{ position: 'absolute', top: 0, left: 0 }}
+                      style={{ position: "absolute", top: 0, left: 0 }}
                     />
                   </div>
                 </div>
@@ -82,6 +71,7 @@ function Front() {
           </div>
         </div>
       </motion.div>
+
       <motion.div
         className="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 text-center"
         style={{ backgroundColor: "#676A6E", color: "white" }}
@@ -89,7 +79,7 @@ function Front() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={scrollUpVariants}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
       >
         {[
           { name: "Technic", link: "/technic" },

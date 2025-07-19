@@ -1,12 +1,15 @@
 "use client";
+
 import React from "react";
 import { FaGlobe, FaUsers, FaBullhorn, FaDatabase } from "react-icons/fa";
 import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
 function It() {
   const images = [
     "/images/react.png",
     "/images/next.png",
-
     "/images/ai.png",
     "/images/figma.png",
     "/images/pr.png",
@@ -36,6 +39,7 @@ function It() {
     "/images/github.png",
     "/images/ubuntu.png",
   ];
+
   const image = [
     "/images/gts.png",
     "/images/lightstorm.png",
@@ -46,100 +50,84 @@ function It() {
     "/images/redhat.png",
     "/images/jio.png",
   ];
-  const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
   return (
     <>
-      <div className="container-fluid ">
-      <div className="row g-0 p-0 m-0 align-items-stretch">
-  {/* Video Column */}
-  <div className="col-md-7 col-lg-7 col-12 p-0">
-    <ReactPlayer
-      url="https://youtu.be/dbbfw3Oz44M"
-      controls
-      playing={true}
-      muted={true}
-      width="100%"
-      height="400px"
-      className="responsive-video"
-    />
-  </div>
+      <div className="container-fluid">
+        <div className="row g-0 p-0 m-0 align-items-stretch">
+          <div className="col-md-7 col-lg-7 col-12 p-0">
+            <ReactPlayer
+              url="https://youtu.be/dbbfw3Oz44M"
+              controls
+              playing
+              muted
+              width="100%"
+              height="400px"
+              className="responsive-video"
+            />
+          </div>
 
-  {/* IT Solutions Column */}
-  <div
-    className="col-md-5 col-lg-5 col-12 custom-it-solutions  d-flex align-items-center"
-    style={{
-      backgroundImage: "url('/images/bg.jpeg')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      padding: "25px",
-    }}
-  >
-    <div className="d-flex flex-column align-items-end text-end w-100">
-      <h3 className="text-white">CUSTOMIZED IT SOLUTIONS</h3>
+          <div
+            className="col-md-5 col-lg-5 col-12 d-flex align-items-center"
+            style={{
+              backgroundImage: "url('/images/bg.jpeg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              padding: "25px",
+            }}
+          >
+            <div className="d-flex flex-column align-items-end text-end w-100">
+              <h3 className="text-white">CUSTOMIZED IT SOLUTIONS</h3>
 
-      <p
-        className="d-flex align-items-center justify-content-end text-white custom-it-item gap-3 mt-2"
-        onClick={() =>
-          document.getElementById("ttl").scrollIntoView({ behavior: "smooth", block: "center" })
-        }
-        style={{ cursor: "pointer" }}
-      >
-        <span style={{ minWidth: "30px", textAlign: "center" }}>
-          <FaGlobe size={24} />
-        </span>
-        <span>Website, TTL & Mass Communication Solutions</span>
-      </p>
-
-      <p
-        className="d-flex align-items-center justify-content-end text-white custom-it-item gap-3"
-        onClick={() =>
-          document.getElementById("crm").scrollIntoView({ behavior: "smooth", block: "center" })
-        }
-        style={{ cursor: "pointer" }}
-      >
-        <span style={{ minWidth: "30px", textAlign: "center" }}>
-          <FaUsers size={23} />
-        </span>
-        <span>Customized CRM Solutions & App Development</span>
-      </p>
-
-      <p
-        className="d-flex align-items-center justify-content-end text-white custom-it-item gap-3 mt-"
-        onClick={() =>
-          document.getElementById("digital").scrollIntoView({ behavior: "smooth", block: "center" })
-        }
-        style={{ cursor: "pointer" }}
-      >
-        <span style={{ minWidth: "30px", textAlign: "center" }}>
-          <FaBullhorn size={23} />
-        </span>
-        <span>Digital Marketing & AI-Powered Lead Generation</span>
-      </p>
-
-      <p
-        className="d-flex align-items-center justify-content-end text-white custom-it-item gap-3"
-        onClick={() =>
-          document.getElementById("mining").scrollIntoView({ behavior: "smooth", block: "center" })
-        }
-        style={{ cursor: "pointer" }}
-      >
-        <span style={{ minWidth: "30px", textAlign: "center" }}>
-          <FaDatabase size={23} />
-        </span>
-        <span>Data Mining & Business Intelligence Data Mining</span>
-      </p>
-    </div>
-  </div>
-</div>
+              {[
+                {
+                  label: "Website, TTL & Mass Communication Solutions",
+                  icon: <FaGlobe size={24} />,
+                  id: "ttl",
+                },
+                {
+                  label: "Customized CRM Solutions & App Development",
+                  icon: <FaUsers size={23} />,
+                  id: "crm",
+                },
+                {
+                  label: "Digital Marketing & AI-Powered Lead Generation",
+                  icon: <FaBullhorn size={23} />,
+                  id: "digital",
+                },
+                {
+                  label: "Data Mining & Business Intelligence Data Mining",
+                  icon: <FaDatabase size={23} />,
+                  id: "mining",
+                },
+              ].map((item, i) => (
+                <p
+                  key={i}
+                  className="d-flex align-items-center justify-content-end text-white gap-3 mt-2"
+                  style={{ cursor: "pointer" }}
+                  onClick={() =>
+                    document
+                      .getElementById(item.id)
+                      ?.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  <span style={{ minWidth: "30px", textAlign: "center" }}>
+                    {item.icon}
+                  </span>
+                  <span>{item.label}</span>
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Tools & Tech Section */}
       <div className="container mt-4 text-center">
         <h2
           className="ms-md-4"
-          style={{
-            fontSize: "clamp(1rem, 5vw, 2.7rem)",
-            whiteSpace: "nowrap",
-          }}
+          style={{ fontSize: "clamp(1rem, 5vw, 2.7rem)", whiteSpace: "nowrap" }}
         >
           <span style={{ color: "black" }}>Tools &</span>
           <span style={{ color: "#293BB1" }} className="ms-3">
@@ -147,6 +135,7 @@ function It() {
           </span>
         </h2>
       </div>
+
       <div className="scroll-container mt-4">
         <div className="scroll-content scroll-left">
           {images.concat(images).map((img, index) => (
@@ -159,6 +148,7 @@ function It() {
           ))}
         </div>
       </div>
+
       <div className="scroll-container">
         <div className="scroll-content scroll-right">
           {Rightimages.concat(Rightimages).map((img, index) => (
@@ -171,13 +161,12 @@ function It() {
           ))}
         </div>
       </div>
+
+      {/* Infrastructure Section */}
       <div className="container mt-5 text-center">
         <h2
           className="ms-md-4"
-          style={{
-            fontSize: "clamp(1rem, 5vw, 2.7rem)",
-            whiteSpace: "nowrap",
-          }}
+          style={{ fontSize: "clamp(1rem, 5vw, 2.7rem)", whiteSpace: "nowrap" }}
         >
           <span style={{ color: "black" }}>Infrastructure &</span>
           <span style={{ color: "#293BB1" }} className="ms-3">
@@ -190,14 +179,16 @@ function It() {
         <div className="scroll-content scroll-left">
           {image.concat(image).map((img, index) => (
             <img
-              key={`left-${index}`}
+              key={`infra-${index}`}
               src={img}
-              alt="Tech Logo"
+              alt="Infra Logo"
               className="h-30 w-40"
             />
           ))}
         </div>
       </div>
+
+      {/* Styles */}
       <style jsx>{`
         .scroll-container {
           overflow: hidden;
@@ -217,13 +208,11 @@ function It() {
         }
 
         .scroll-left {
-          animation: scroll-left 20s linear infinite;
-          animation-delay: 1s;
+          animation: scroll-left 10s linear infinite;
         }
 
         .scroll-right {
-          animation: scroll-right 20s linear infinite;
-          animation-delay: 1s;
+          animation: scroll-right 10s linear infinite;
         }
 
         .scroll-img {
@@ -250,28 +239,23 @@ function It() {
           }
         }
 
-        /* Responsive: Adjust speed for mobile */
         @media (max-width: 768px) {
           .scroll-content {
             gap: 15px;
           }
           .scroll-img {
-            height: 40px; /* Smaller image size */
+            height: 40px;
           }
           .scroll-left {
-            animation: scroll-left 15s linear infinite;
-            animation-delay: 1s; /* Keep delay */
+            animation: scroll-left 7s linear infinite;
           }
           .scroll-right {
-            animation: scroll-right 15s linear infinite;
-            animation-delay: 1s;
+            animation: scroll-right 7s linear infinite;
+          }
+          .responsive-video {
+            height: 300px !important;
           }
         }
-            @media (max-width: 768px) {
-    .responsive-video {
-      height: 300px !important;
-    }
-  }
       `}</style>
     </>
   );

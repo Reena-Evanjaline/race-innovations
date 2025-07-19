@@ -6,38 +6,44 @@ import { motion } from "framer-motion";
 function Choose() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Slide-up animation
-  const slideFromBottom = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  const fastSlideUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" }, // Faster animation
+    },
   };
 
   return (
     <div className="container-fluid">
-      {/* Title Animation */}
+      {/* Title */}
       <motion.h5
         className="mt-4 text-center"
         style={{ fontSize: "2.5rem", whiteSpace: "nowrap" }}
         initial="hidden"
         animate={hasAnimated ? "visible" : "hidden"}
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={slideFromBottom}
+        viewport={{ once: true, amount: 0.4 }}
+        variants={fastSlideUp}
         onViewportEnter={() => setHasAnimated(true)}
       >
         <span style={{ color: "black" }}>Why</span>
-        <span style={{ color: "#293BB1", marginLeft: "15px" }}>Choose Us?</span>
+        <span style={{ color: "#293BB1", marginLeft: "15px" }}>
+          Choose Us?
+        </span>
       </motion.h5>
 
       <div className="container">
         <div className="row justify-content-center mt-4">
+          {/* Text */}
           <motion.div
             className="col-md-8"
             initial="hidden"
             animate={hasAnimated ? "visible" : "hidden"}
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={slideFromBottom}
+            viewport={{ once: true, amount: 0.4 }}
+            variants={fastSlideUp}
             onViewportEnter={() => setHasAnimated(true)}
           >
             <p>
@@ -54,19 +60,21 @@ function Choose() {
             </p>
           </motion.div>
 
+          {/* Image */}
           <motion.div
             className="col-md-4"
             initial="hidden"
             animate={hasAnimated ? "visible" : "hidden"}
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={slideFromBottom}
+            viewport={{ once: true, amount: 0.4 }}
+            variants={fastSlideUp}
             onViewportEnter={() => setHasAnimated(true)}
           >
             <Image
               src="/images/notes.png"
               width={250}
               height={250}
+              alt="Why Choose Us"
               className="card-img-top"
               style={{
                 width: "80%",
@@ -74,7 +82,6 @@ function Choose() {
                 margin: "0 auto",
                 objectFit: "contain",
               }}
-              alt="Who We Are"
             />
           </motion.div>
         </div>

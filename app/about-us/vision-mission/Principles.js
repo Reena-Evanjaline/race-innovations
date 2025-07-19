@@ -1,10 +1,11 @@
-"use client"; 
+"use client";
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
+
 const fadeInUpVariants = {
-  hidden: { opacity: 0, y: 50 }, 
+  hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -22,14 +23,14 @@ function Principles() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUpVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.3 }}
       >
         <span style={{ color: "black" }}>Race</span>
         <span style={{ color: "#293BB1", marginLeft: "15px" }}>Principles</span>
       </motion.h1>
 
       <div
-        className="container-fluid "
+        className="container-fluid"
         style={{
           backgroundImage: 'url("/images/rectangle.webp")',
           backgroundSize: "cover",
@@ -46,7 +47,7 @@ function Principles() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeInUpVariants}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               {[
                 {
@@ -72,7 +73,7 @@ function Principles() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUpVariants}
-                  transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
                   <div className="col-md-4 text-center">
                     <Image
@@ -92,13 +93,14 @@ function Principles() {
                 </motion.div>
               ))}
             </motion.div>
+
             <motion.div
               className="col-md-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeInUpVariants}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               {[
                 {
@@ -124,7 +126,7 @@ function Principles() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUpVariants}
-                  transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
                   <div className="col-md-4 text-center">
                     <Image

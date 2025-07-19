@@ -1,12 +1,31 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 function Crm() {
   return (
-    <div className="container-fluid">
+    <motion.div
+      className="container-fluid"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+    >
       <div className="row">
-        <div className="col-lg-6 mt-4">
+        <motion.div
+          className="col-lg-6 mt-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
           <h3 style={{ color: "#293BB1" }}>
             Customized CRM Solutions & App Development
           </h3>
@@ -18,41 +37,60 @@ function Crm() {
           <div style={{ textAlign: "justify" }}>
             <strong>Key Features:</strong>
             <ul>
-              <li className="mt-2">
-                <strong>Custom AI-Integrated CRM –</strong> Tailored solutions
-                powered by AI, ML, and LLMs to automate workflows and enhance
-                customer interactions.
-              </li>
-              <li className="mt-2">
-                <strong>Lead & Sales Pipeline Management –</strong> AI-driven
-                tracking, predictive insights, and automation for seamless
-                lead nurturing and conversions.
-              </li>
-              <li className="mt-2">
-                <strong>Intelligent Follow-Ups & Reporting –</strong> 
-                LLM-powered communication, automated reminders, and real-time
-                analytics for proactive customer engagement.
-              </li>
-              <li className="mt-2">
-                <strong>Seamless Integration –</strong> Effortlessly connect
-                CRM with marketing, finance, and operations for a unified
-                business ecosystem.
-              </li>
+              {[
+                {
+                  title: "Custom AI-Integrated CRM –",
+                  desc:
+                    "Tailored solutions powered by AI, ML, and LLMs to automate workflows and enhance customer interactions.",
+                },
+                {
+                  title: "Lead & Sales Pipeline Management –",
+                  desc:
+                    "AI-driven tracking, predictive insights, and automation for seamless lead nurturing and conversions.",
+                },
+                {
+                  title: "Intelligent Follow-Ups & Reporting –",
+                  desc:
+                    "LLM-powered communication, automated reminders, and real-time analytics for proactive customer engagement.",
+                },
+                {
+                  title: "Seamless Integration –",
+                  desc:
+                    "Effortlessly connect CRM with marketing, finance, and operations for a unified business ecosystem.",
+                },
+              ].map((item, index) => (
+                <motion.li
+                  key={index}
+                  className="mt-2"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  <strong>{item.title}</strong> {item.desc}
+                </motion.li>
+              ))}
             </ul>
           </div>
-         
-        </div>
-        <div className="col-lg-6 mt-3">
+        </motion.div>
+
+        <motion.div
+          className="col-lg-6 mt-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
           <div style={{ position: "relative", width: "100%", height: "400px" }}>
             <Image
               src="/images/crm.webp"
-              alt="Globe showing world map"
+              alt="CRM Illustration"
               fill
               className="img-fluid rounded shadow-sm"
               style={{ objectFit: "cover", borderRadius: "10px" }}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <style jsx>{`
@@ -73,7 +111,7 @@ function Crm() {
           color: white;
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 }
 

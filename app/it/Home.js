@@ -6,6 +6,7 @@
   import Crm from "./Crm";
   import Digital from "./Digital";
   import Mining from "./Mining";
+import Why from "../product/Why";
 
 
 
@@ -30,6 +31,9 @@
         <div id="mining">
           <Mining />
         </div>
+        <div className="mt-5">
+      <Why />
+      </div>
         </div>
         <Footer />
       </>
