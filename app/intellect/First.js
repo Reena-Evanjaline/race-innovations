@@ -19,11 +19,11 @@ const scrollUpVariants = {
 function First() {
   return (
     <>
-      <div className="container-fluid p-0 d-flex align-items-center">
-        <div className="container-fluid p-0">
-          <div className="row align-items-center text-center text-md-center m-0">
+      <div className="container-fluid p-0 d-flex align-items-center pt-5">
+        <div className="container-fluid  ">
+          <div className="row align-items-center text-center text-md-center m-0 ">
             <motion.div
-              className="col-md-4 col-12 mb-md-0"
+              className="col-md-4 col-12 mb-md-0 "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}

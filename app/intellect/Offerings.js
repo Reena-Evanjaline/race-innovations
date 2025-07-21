@@ -96,7 +96,7 @@ function Offerings() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "82vh",
+          minHeight: "72vh",
         }}
       >
         <div className="container" style={{ marginBottom: "100px" }}>

@@ -14,7 +14,7 @@ function Mission() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid pt-5">
       <div className="row align-items-center">
         {/* Heading */}
         <motion.div

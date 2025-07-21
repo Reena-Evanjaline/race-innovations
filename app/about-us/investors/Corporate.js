@@ -15,16 +15,16 @@ function Corporate() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <h1
+        <h3
           style={{
-            fontSize: "clamp(1.5rem, 5vw, 3rem)",
+            fontSize: "clamp(1rem, 5vw, 2rem)",
             fontWeight: "bold",
             textAlign: "center",
           }}
         >
           <span style={{ color: "black" }}>Drive the Future with RACE</span>
           <span style={{ color: "#293BB1" }}> – Partner in Innovation!</span>
-        </h1>
+        </h3>
 
         <p style={{ textAlign: "justify" }}>
           At Race Innovationss, we are shaping the future of automotive,
@@ -48,7 +48,7 @@ function Corporate() {
           >
             <h1
               style={{
-                fontSize: "clamp(2rem, 5vw, 3rem)",
+                fontSize: "clamp(1rem, 5vw, 2.5rem)",
                 whiteSpace: "nowrap",
               }}
             >

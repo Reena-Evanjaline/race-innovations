@@ -54,73 +54,85 @@ function It() {
   return (
     <>
       <div className="container-fluid">
-        <div className="row g-0 p-0 m-0 align-items-stretch">
-          <div className="col-md-7 col-lg-7 col-12 p-0">
-            <ReactPlayer
-              url="https://youtu.be/dbbfw3Oz44M"
-              controls
-              playing
-              muted
-              width="100%"
-              height="400px"
-              className="responsive-video"
-            />
-          </div>
+      <div className="row g-0 p-0 m-0" style={{ height: "100%" }}>
+  {/* Video Column */}
+  <div className="col-md-7 col-lg-7 col-12 p-0 position-relative" style={{ height: '100%' }}>
+    <div style={{ position: "relative", width: "100%", paddingTop: "56.25%" }}>
+      <ReactPlayer
+        url="https://youtu.be/dbbfw3Oz44M"
+        playing
+        muted
+        controls
+        width="100%"
+        height="100%"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          objectFit: "cover",
+        }}
+      />
+    </div>
+  </div>
 
-          <div
-            className="col-md-5 col-lg-5 col-12 d-flex align-items-center"
-            style={{
-              backgroundImage: "url('/images/bg.jpeg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              padding: "25px",
-            }}
-          >
-            <div className="d-flex flex-column align-items-end text-end w-100">
-              <h3 className="text-white">CUSTOMIZED IT SOLUTIONS</h3>
+  {/* Text Column */}
+  <div
+    className="col-md-5 col-lg-5 col-12 d-flex align-items-center"
+    style={{
+      backgroundImage: "url('/images/bg.jpeg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      padding: "25px",
+    }}
+  >
+    <div className="d-flex flex-column align-items-end text-end w-100">
+      <h3 className="text-white">CUSTOMIZED IT SOLUTIONS</h3>
 
-              {[
-                {
-                  label: "Website, TTL & Mass Communication Solutions",
-                  icon: <FaGlobe size={24} />,
-                  id: "ttl",
-                },
-                {
-                  label: "Customized CRM Solutions & App Development",
-                  icon: <FaUsers size={23} />,
-                  id: "crm",
-                },
-                {
-                  label: "Digital Marketing & AI-Powered Lead Generation",
-                  icon: <FaBullhorn size={23} />,
-                  id: "digital",
-                },
-                {
-                  label: "Data Mining & Business Intelligence Data Mining",
-                  icon: <FaDatabase size={23} />,
-                  id: "mining",
-                },
-              ].map((item, i) => (
-                <p
-                  key={i}
-                  className="d-flex align-items-center justify-content-end text-white gap-3 mt-2"
-                  style={{ cursor: "pointer" }}
-                  onClick={() =>
-                    document
-                      .getElementById(item.id)
-                      ?.scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
-                >
-                  <span style={{ minWidth: "30px", textAlign: "center" }}>
-                    {item.icon}
-                  </span>
-                  <span>{item.label}</span>
-                </p>
-              ))}
-            </div>
-          </div>
-        </div>
+      {[
+        {
+          label: "Website, TTL & Mass Communication Solutions",
+          icon: <FaGlobe size={24} />,
+          id: "ttl",
+        },
+        {
+          label: "Customized CRM Solutions & App Development",
+          icon: <FaUsers size={23} />,
+          id: "crm",
+        },
+        {
+          label: "Digital Marketing & AI-Powered Lead Generation",
+          icon: <FaBullhorn size={23} />,
+          id: "digital",
+        },
+        {
+          label: "Data Mining & Business Intelligence Data Mining",
+          icon: <FaDatabase size={23} />,
+          id: "mining",
+        },
+      ].map((item, i) => (
+        <p
+          key={i}
+          className="d-flex align-items-center justify-content-end text-white gap-3 mt-2"
+          style={{ cursor: "pointer" }}
+          onClick={() =>
+            document
+              .getElementById(item.id)
+              ?.scrollIntoView({ behavior: "smooth", block: "center" })
+          }
+        >
+          <span style={{ minWidth: "30px", textAlign: "center" }}>
+            {item.icon}
+          </span>
+          <span>{item.label}</span>
+        </p>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+
       </div>
 
       {/* Tools & Tech Section */}

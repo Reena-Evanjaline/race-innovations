@@ -54,7 +54,7 @@ function Banner() {
   };
 
   return (
-    <div className="container">
+    <div className="container pt-5" style={{ marginBottom: "100px" }}>
       <div className="row">
         {/* Swiper Section */}
         <div className="col-md-8">

@@ -50,7 +50,7 @@ const Navbar = () => {
 
           <a
             className={`nav-link menus d-lg-none ${styles.navbarCustom}`}
-            href="/images/corporate.pdf"
+            href="/corporate-profile"
             style={{
               color: "#fff",
               backgroundColor: "#293BB1",
@@ -230,7 +230,7 @@ const Navbar = () => {
             <div className="d-flex">
               <a
                 className={`nav-link menus ${styles.navbarCustom}`}
-                href="/images/corporate.pdf"
+                href="/corporate-profile"
                 style={{
                   color: "#fff",
                   backgroundColor: "#293BB1",

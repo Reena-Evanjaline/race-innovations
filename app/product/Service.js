@@ -25,13 +25,13 @@ function Service() {
         viewport={{ once: true, amount: 0.3 }}
         variants={slideFromBottom}
         style={{
-          fontSize: "clamp(1.5rem, 5vw, 3rem)",
+          fontSize: "clamp(1rem, 5vw, 3rem)",
           whiteSpace: "nowrap",
           textAlign: "center",
         }}
         className="mt-5"
       >
-        <span style={{ color: "black" }}>Our Product Research</span><br />
+        <span style={{ color: "black" }}>Our Product Research</span>
         <span style={{ color: "#293BB1", marginLeft: "9px" }}>Reports Cover </span>
       </motion.h4>
 

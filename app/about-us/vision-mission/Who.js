@@ -39,7 +39,7 @@ function Who() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "70vh",
+          minHeight: "65vh",
           padding: "0.5rem",
         }}
       >

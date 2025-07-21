@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 function Indust() {
   const [isMounted, setIsMounted] = useState(false);
@@ -67,23 +68,25 @@ function Indust() {
             RACE has a global presence, spanning Europe, East, West, and North Africa, North and Latin America, Korea, China, the UK, as well as other Asian and SAARC nations, with its headquarters in India. Our international reach, application-focused approach, and deep expertise in the automotive, farm equipment and implements, construction, and mining sectors make us the ideal local partner for OEMs, vehicle aggregate manufacturers, fleet operators, and logistics service providers.
           </motion.p>
 
-          <motion.button
-            className="btn mt-2"
-            style={{
-              width: "198.79px",
-              height: "45.72px",
-              backgroundColor: "#A497971F",
-              borderRadius: "19.88px",
-              border: "0.99px solid #A497971F",
-              transform: "rotate(0.79deg)",
-            }}
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.3 }} // faster
-            viewport={{ once: true }}
-          >
-            GET STARTED <i className="bi bi-arrow-right ms-2"></i>
-          </motion.button>
+          <Link href="/about-us/vision-mission" passHref>
+            <motion.button
+              className="btn mt-2"
+              style={{
+                width: "198.79px",
+                height: "45.72px",
+                backgroundColor: "#A497971F",
+                borderRadius: "19.88px",
+                border: "0.99px solid #A497971F",
+                transform: "rotate(0.79deg)",
+              }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              GET STARTED <i className="bi bi-arrow-right ms-2"></i>
+            </motion.button>
+          </Link>
         </div>
       </div>
     </motion.div>

@@ -49,7 +49,7 @@ function Front() {
                 <div
                   style={{
                     width: "100%",
-                    height: "400px",
+                    height: "100%",
                     overflow: "hidden",
                     borderRadius: "10px",
                   }}

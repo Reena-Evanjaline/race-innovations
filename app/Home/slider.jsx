@@ -29,7 +29,7 @@ export default function ResponsiveSwiper() {
     { src: "/images/mo-2.webp", alt: "Connect mobile" },
     { src: "/images/mo-3.webp", alt: "Intellect mobile" },
     { src: "/images/mo-4.webp", alt: "Survey mobile" },
-    { src: "/images/mo-5.webp", alt: "Legal mobile" },
+
     { src: "/images/mo-6.webp", alt: "Technic mobile" },
   ];
 
@@ -48,7 +48,7 @@ export default function ResponsiveSwiper() {
   const selectedImages = isMobile ? mobileImages : desktopImages;
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen mb-5">
       <Swiper
         speed={1200}
         slidesPerView={1}

@@ -178,7 +178,7 @@ const Flip = () => {
   }, [isVerifyPassword, showDownload, pdf_url]);
 
   return (
-    <div className="flip-container">
+    <div className="flip-container pt-5">
       <Document file={pdf_url} onLoadSuccess={onDocumentLoadSuccess}>
         {isReady && numPages && (
           <HTMLFlipBook

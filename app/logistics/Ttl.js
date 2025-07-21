@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const slideInLeft = {
   hidden: { opacity: 0, x: -50 },
@@ -37,7 +38,7 @@ function Ttl() {
         >
           <div style={{ position: "relative", width: "100%", height: "400px" }}>
             <Image
-              src="/images/transport.jfif"
+              src="/images/co.png"
               alt="TTL Illustration"
               fill
               className="img-fluid rounded shadow-sm"
@@ -55,16 +56,23 @@ function Ttl() {
             Transport Engineering
           </h3>
           <p className="mt-3" style={{ textAlign: "justify" }}>
-            Our Transport Engineering services focus on designing, developing, and optimizing efficient and sustainable transportation systems tailored to modern mobility demands. We provide end-to-end solutions across road, freight, and public transport networks, helping businesses and governments streamline logistics, reduce transit costs, and enhance infrastructure performance.
+            For the safe and successful transportation of heavy-lift and over-dimensional cargo, technical expertise is crucial. That’s why RACE offers tailor-made transport engineering solutions, feasibility and infrastructure studies, detailed route survey services, and technical project consulting to ensure optimal results.
 
-            By combining engineering expertise with data-driven analysis, we ensure that transport systems are not only safe and reliable but also aligned with future-ready technologies and environmental goals.
+            Our specialised services include vehicle stability checks, gradient and traction analysis to determine the required pullers and torque at wheels, multimodal movement studies, barge loading and unloading analysis, wharf ground stability assessments, jetty development and stability evaluations, and bridge load calculations.
+            By combining engineering precision, data-driven planning, and on-ground expertise, RACE ensures safe, efficient, and compliant ODC movement, reducing operational risks and ensuring reliable delivery across challenging terrains and multimodal routes. <Link href="/intellect/lbi" passHref>
+  <button className="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow">
+    LBI
+  </button>
+</Link>
+
           </p>
           <p style={{ textAlign: "justify" }}>
             <strong>
-             With a deep understanding of terrain conditions, usage patterns, and industry demands, we help shape transportation systems that drive growth, reduce operational risk, and improve the movement of people and goods.
+
 
 
             </strong>
+
           </p>
         </motion.div>
       </div>

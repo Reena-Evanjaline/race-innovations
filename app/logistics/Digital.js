@@ -6,10 +6,10 @@ function Digital() {
   return (
     <div className="container-fluid mt-1" style={{ aspectRatio:2.96/1, position: "relative" }}>
       <Image
-        src="/images/logi-banner.png"
+        src="/images/transport-eng.png"
         alt="Digital Banner"
         fill
-        style={{ objectFit:"fill" }}
+        style={{ objectFit:"cover" }}
       />
     </div>
   );

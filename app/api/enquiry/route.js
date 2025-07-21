@@ -62,7 +62,7 @@ export async function POST(req) {
     `;
 
 
-    await sendBulkEmails([email, 'kh@raceinnovations.in'], subject, htmlContent);
+    await sendBulkEmails([ 'kh@raceinnovations.in','projecthead@raceinnovations.in'], subject, htmlContent);
 
     return NextResponse.json({ success: true, message: 'Enquiry submitted successfully' });
   } catch (error) {

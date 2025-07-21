@@ -21,7 +21,7 @@ function Mission() {
         transition={{ duration: 0.3 }}
       ></motion.div>
 
-      <div className="container">
+      <div className="container pt-5">
         <div className="row align-items-center text-center text-md-start">
           <motion.div
             className="col-md-4 col-12 mb-2 mb-md-0"

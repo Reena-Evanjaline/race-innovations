@@ -40,7 +40,7 @@ function Cover() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "80vh",
+          minHeight: "70vh",
         }}
       >
         <div className="container mt-5">

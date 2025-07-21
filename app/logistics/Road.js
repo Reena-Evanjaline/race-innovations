@@ -30,24 +30,11 @@ function Crm() {
             Road Transportation
           </h3>
           <div className="mt-3" style={{ textAlign: "justify" }}>
-            We specialize in providing reliable, efficient, and cost-effective land-based logistics solutions that ensure your goods are delivered safely and on time, every time. Our road transportation services are designed to meet the diverse needs of businesses across various industries—whether it's full truckload (FTL), less-than-truckload (LTL), last-mile delivery, or customized logistics planning.
+            Over-Dimensional Road Transportation Services by RACE
+            The RACE Transport Team specialises in Over-Dimensional (ODC) Road Transportation Services, ensuring the safe, reliable, and cost-effective movement of heavy-lift and oversized cargo. Safety is our first priority, and every project is executed with strict adherence to engineering and regulatory standards.
 
-            Our fleet includes a wide range of vehicles—from light commercial vans to heavy-duty trucks—enabling us to handle shipments of all sizes and specifications. With a strong network of regional and national routes, we ensure optimized transit times and consistent delivery performance
-            Our Road Transport Capabilities Include:
 
-            Door-to-Door Delivery Services for fast and hassle-free operations.
-
-            Real-Time Tracking and visibility through GPS-enabled fleet management systems.
-
-            Temperature-Controlled Transportation for perishable or sensitive goods.
-
-            Express and Scheduled Deliveries to meet tight timelines and business demands.
-
-            Secure & Compliant Operations, adhering to safety regulations and load integrity standards.
-
-            Pan-India Reach with strong presence in tier 1, 2, and 3 cities.
-
-            Whether you're moving raw materials, finished goods, or time-critical parcels, we tailor our transportation strategy to ensure maximum reliability, safety, and efficiency on the road
+            Our expert team conducts comprehensive route surveys, vehicle stability checks, gradient and load distribution analysis to determine the right pullers, trailers, and axle configurations. By deploying appropriate equipment engineered for optimal cost without compromising on safety, the RACE Transport Team ensures risk-free, compliant, and timely transportation, making RACE a trusted partner for industries managing critical equipment and heavy-load consignments across challenging terrains.
           </div>
           {/* <div style={{ textAlign: "justify" }}>
             <strong>Key Features:</strong>
@@ -98,7 +85,7 @@ function Crm() {
         >
           <div style={{ position: "relative", width: "100%", height: "400px" }}>
             <Image
-              src="/images/tr.png"
+              src="/images/ro.png"
               alt="CRM Illustration"
               fill
               className="img-fluid rounded shadow-sm"
@@ -109,7 +96,7 @@ function Crm() {
       </div>
 
       <div className="row">
-          <motion.div
+        <motion.div
           className="col-lg-6 mt-3"
           initial="hidden"
           whileInView="visible"
@@ -134,31 +121,25 @@ function Crm() {
           variants={fadeInUp}
         >
           <h3 style={{ color: "#293BB1" }}>
-           Transport Logistics Consultancy
+            Transport Logistics Consultancy
           </h3>
           <div className="mt-3" style={{ textAlign: "justify" }}>
-           Our Transport Logistics Consultancy services empower businesses to optimize their supply chain, streamline transportation operations, and reduce costs through data-driven strategy and deep industry expertise. We provide end-to-end solutions tailored to your industry’s logistics challenges—whether you're managing complex fleet operations, cross-border shipments, or last-mile delivery.
+            Your Partner for Results-Driven Consulting
+            Looking for logistics consultancy that prioritises deadlines, budgets, and measurable results? Trust RACE to deliver the most effective solutions for your project.
 
-What We Offer:
 
-Route & Network Optimization – Reduce delivery time and fuel consumption with intelligent route planning
+            Our experienced consulting team develops innovative, tailor-made strategies covering multimodal transport planning, development of jetties, AI-driven route optimisation, warehouse and supply chain management, and advanced safety planning. We also support the establishment of 5G private networks to ensure seamless, real-time communication between equipment, enhancing operational efficiency and reliability.
 
-Fleet Utilization Strategy – Improve vehicle capacity usage and reduce idle time
+            Sustainability Consulting – Shift towards greener, carbon-conscious logistics solutions
 
-Warehousing & Distribution Planning – Align storage and distribution with real-time demand
+            With RACE, you gain a trusted partner committed to achieving safe, efficient, and cost-effective project execution.
 
-Technology Integration – Implement GPS tracking, TMS, and logistics automation tools
 
-Cost & Performance Analysis – Benchmark logistics KPIs to improve ROI
-
-Sustainability Consulting – Shift towards greener, carbon-conscious logistics solutions
-
-From small fleet operators to large-scale logistics providers, we bring strategic clarity and operational efficiency to every part of your transport ecosystem—helping you deliver faster, smarter, and more reliably.
           </div>
-         
+
         </motion.div>
 
-      
+
       </div>
 
       <style jsx>{`

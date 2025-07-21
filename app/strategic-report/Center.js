@@ -21,7 +21,7 @@ function Center() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "130vh",
+          minHeight: "114vh",
         }}
       >
         {/* Title Animation */}

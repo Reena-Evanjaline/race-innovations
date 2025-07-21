@@ -36,7 +36,7 @@ function Principles() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "70vh",
+          minHeight: "62vh",
         }}
       >
         <div className="container">

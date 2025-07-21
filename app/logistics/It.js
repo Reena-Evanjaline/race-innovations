@@ -54,19 +54,20 @@ function It() {
   return (
     <>
       <div className="container-fluid">
-        <div className="row g-0 p-0 m-0 align-items-stretch">
-          <div className="col-md-7 col-lg-7 col-12 p-0">
+        <div className="row g-0 p-0 m-0 align-items-stretch" style={{ minHeight: '401px' }}>
+          {/* Left Column (Video) */}
+          <div className="col-md-7 col-lg-7 col-12 d-flex align-items-stretch">
             <video
               src="/images/vi.mp4"
               controls
               autoPlay
               muted
               loop
-              style={{ width: '100%', height: '400px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
-
           </div>
 
+          {/* Right Column (Text on Background) */}
           <div
             className="col-md-5 col-lg-5 col-12 d-flex align-items-center"
             style={{
@@ -119,9 +120,9 @@ function It() {
                 </p>
               ))}
             </div>
-
           </div>
         </div>
+
       </div>
 
       {/* Tools & Tech Section */}

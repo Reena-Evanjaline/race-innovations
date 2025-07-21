@@ -1,11 +1,11 @@
-  import Navbar from "../components/Navbar";
-  import Footer from "../components/Footer";
-  import React from 'react';
-  import It from "./It";
-  import Ttl from "./Ttl";
-  import Crm from "./Crm";
-  import Digital from "./Digital";
-  import Mining from "./Mining";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import React from 'react';
+import It from "./It";
+import Ttl from "./Ttl";
+import Crm from "./Crm";
+import Digital from "./Digital";
+import Mining from "./Mining";
 import Why from "../product/Why";
 
 
@@ -13,11 +13,11 @@ import Why from "../product/Why";
 
 
 
-  function Itpage() {
-    return (
-      <>
-        <Navbar />
-        <div className="main-content">
+function Itpage() {
+  return (
+    <>
+      <Navbar />
+      <div className="main-content" style={{overflowX: 'hidden'}}>
         <It />
         <div id="ttl">
           <Ttl />
@@ -32,13 +32,13 @@ import Why from "../product/Why";
           <Mining />
         </div>
         <div className="mt-5">
-      <Why />
-      </div>
+          <Why />
         </div>
-        <Footer />
-      </>
-    );
-  }
-  
+      </div>
+      <Footer />
+    </>
+  );
+}
 
-  export default Itpage;
+
+export default Itpage;

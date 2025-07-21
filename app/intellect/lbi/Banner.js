@@ -13,7 +13,7 @@ function Banner() {
   return (
     <>
       <motion.div
-        className="container-fluid  p-1 d-flex align-items-center"
+        className="container-fluid  p-1 d-flex align-items-center pt-5"
        
         initial="hidden"
         animate="visible"

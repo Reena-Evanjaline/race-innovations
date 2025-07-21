@@ -12,13 +12,13 @@ function CareerHome() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut" }, // ✅ Faster animation
+      transition: { duration: 0.4, ease: "easeOut" }, 
     },
   };
 
   return (
     <motion.div
-      className="container-fluid d-flex align-items-center"
+      className="container-fluid d-flex align-items-center pt-4"
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
       whileInView="visible"

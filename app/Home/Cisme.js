@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 function Cisme() {
   return (
-    <div className="container-fluid" style={{ backgroundColor: "#EEEEF2" }}>
+    <div className="container-fluid pt-4" style={{ backgroundColor: "#EEEEF2" }}>
       <motion.div
         className="text-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.5, ease: "easeOut" }} // Faster animation
+        transition={{ duration: 0.5, ease: "easeOut" }} 
       >
         <video
           controls

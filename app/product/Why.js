@@ -60,7 +60,7 @@ export default function EnquiryForm() {
   };
 
   return (
-    <div className="container mb-5">
+    <div className="container" style={{ marginBottom: '100px' }}>
       {/* Button Section */}
       <motion.div
         className="d-flex justify-content-between align-items-center bg-dark p-3 rounded"
