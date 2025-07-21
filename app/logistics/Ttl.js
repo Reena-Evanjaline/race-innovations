@@ -36,15 +36,32 @@ function Ttl() {
           className="col-lg-8"
           variants={slideInLeft}
         >
-          <div style={{ position: "relative", width: "100%", height: "400px" }}>
-            <Image
-              src="/images/co.png"
-              alt="TTL Illustration"
-              fill
-              className="img-fluid rounded shadow-sm"
-              style={{ objectFit: "cover", borderRadius: "10px" }}
-            />
-          </div>
+         <div style={{ position: "relative", width: "100%", height: "400px" }}>
+  <Image
+    src="/images/co.png"
+    alt="TTL Illustration"
+    fill
+    className="img-fluid rounded shadow-sm"
+    style={{ objectFit: "cover", borderRadius: "10px" }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      bottom: "10px", // adjust for placement
+      right: "10px",  // change to 'left' or 'center' if needed
+      backgroundColor: "rgba(0, 0, 0, 0.4)", // semi-transparent background
+      color: "white",
+      padding: "4px 8px",
+      fontSize: "10px", // very small
+      borderRadius: "5px",
+      pointerEvents: "none", // makes it non-interactive
+      userSelect: "none"
+    }}
+  >
+    Courtesy: Omega Morgan
+  </div>
+</div>
+
         </motion.div>
 
         {/* Right text with animation */}
