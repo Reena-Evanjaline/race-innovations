@@ -31,36 +31,35 @@ function Ttl() {
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className="row">
-        {/* Left image with animation */}
         <motion.div
           className="col-lg-8"
           variants={slideInLeft}
         >
-         <div style={{ position: "relative", width: "100%", height: "400px" }}>
-  <Image
-    src="/images/co.png"
-    alt="TTL Illustration"
-    fill
-    className="img-fluid rounded shadow-sm"
-    style={{ objectFit: "cover", borderRadius: "10px" }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      bottom: "10px", // adjust for placement
-      right: "10px",  // change to 'left' or 'center' if needed
-      backgroundColor: "rgba(0, 0, 0, 0.4)", // semi-transparent background
-      color: "white",
-      padding: "4px 8px",
-      fontSize: "10px", // very small
-      borderRadius: "5px",
-      pointerEvents: "none", // makes it non-interactive
-      userSelect: "none"
-    }}
-  >
-    Courtesy: Omega Morgan
-  </div>
-</div>
+          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+            <Image
+              src="/images/omega.png"
+              alt="TTL Illustration"
+              fill
+              className="img-fluid rounded shadow-sm"
+              style={{ objectFit: "cover", borderRadius: "10px" }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                bottom: "10px",
+                right: "10px",
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                color: "white",
+                padding: "4px 8px",
+                fontSize: "10px",
+                borderRadius: "5px",
+                pointerEvents: "none",
+                userSelect: "none"
+              }}
+            >
+              Courtesy: Omega Morgan
+            </div>
+          </div>
 
         </motion.div>
 
@@ -77,10 +76,10 @@ function Ttl() {
 
             Our specialised services include vehicle stability checks, gradient and traction analysis to determine the required pullers and torque at wheels, multimodal movement studies, barge loading and unloading analysis, wharf ground stability assessments, jetty development and stability evaluations, and bridge load calculations.
             By combining engineering precision, data-driven planning, and on-ground expertise, RACE ensures safe, efficient, and compliant ODC movement, reducing operational risks and ensuring reliable delivery across challenging terrains and multimodal routes. <Link href="/intellect/lbi" passHref>
-  <button className="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow">
-    LBI
-  </button>
-</Link>
+              <button className="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow">
+                LBI
+              </button>
+            </Link>
 
           </p>
           <p style={{ textAlign: "justify" }}>

@@ -45,7 +45,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-white position-fixed" style={{ zIndex: 1000,width: "100%", marginBottom: "40px" }}>
         <div className="container-fluid ">
           <Link className="navbar-brand d_navlogo" href="/">
-            <Image src="/images/hori.png" alt="Logo" width={180} height={50} />
+            <Image src="/images/logo_v2.png" alt="Logo" width={180} height={34} />
           </Link>
 
           <a
