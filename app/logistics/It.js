@@ -2,9 +2,7 @@
 
 import React from "react";
 import { FaGlobe, FaUsers, FaBullhorn, FaDatabase } from "react-icons/fa";
-import dynamic from "next/dynamic";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 function It() {
   const images = [
