@@ -1,9 +1,5 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   MdDashboard,
   MdArticle,
@@ -14,89 +10,6 @@ import {
   MdSettings,
 } from "react-icons/md";
 
-const Sidebar = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return (
-    
-    <div className="col-2 col-sm-4 col-md-3 col-xl-2">
-      <div >
-        <div style={{ display: "flex", alignItems: "center", marginTop: "-10px" }}>
-          {!isMobile && (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                width: "100%",
-              }}
-            >
-              <Image
-                src="/images/r.png"
-                alt="Logo"
-                width={80}
-                height={100}
-                style={{ objectFit: "contain" }}
-              />
-              <p style={{ margin: 0, fontSize: "14px", fontWeight: "bold" }}>
-                Race Innovations
-              </p>
-            </div>
-          )}
-        </div>
-  
-        <div style={{ textAlign: "center", marginTop: "10px" }}>
-          <Image
-            src="/images/man.png"
-            alt="Admin Profile"
-            width={isMobile ? 40 : 90}
-            height={isMobile ? 40 : 90}
-            style={{ borderRadius: "50%", objectFit: "cover" }}
-          />
-          {!isMobile && (
-            <>
-              <h5 style={{ fontWeight: "bold", color: "black" }}>User</h5>
-              <h6 style={{ color: "black" }}>Admin</h6>
-            </>
-          )}
-        </div>
-  
-        <nav style={{ width: "100%", marginTop: "20px" }}>
-          <ul style={{ listStyle: "none", padding: "0", width: "100%" }}>
-            {navLinks.map(({ href, Icon, text }) => {
-              const isActive = pathname === href;
-              return (
-                <li key={href} style={navItemStyle}>
-                  <Icon size={20} style={{ color: isActive ? "#013F7C" : "black" }} />
-                  {!isMobile && (
-                    <Link href={href} style={isActive ? activeLinkStyle : linkStyle}>
-                      {text}
-                    </Link>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
-    </div>
-  
-  
-  );
-};
-
-// Navigation Links
 const navLinks = [
   { href: "/dashboard", Icon: MdDashboard, text: "Dashboard" },
   { href: "/admin/blog", Icon: MdArticle, text: "Blog" },
@@ -107,33 +20,54 @@ const navLinks = [
   { href: "/settings", Icon: MdSettings, text: "Settings" },
 ];
 
-// Styles
-const sidebarStyle = {
-  height: "100vh",
-  backgroundColor: "#fff",
-  boxShadow: "2px 0px 10px rgba(0, 0, 0, 0.1)",
-  padding: "20px",
- 
-  left: "0",
-  top: "0",
-  transition: "width 0.3s ease-in-out",
-};
-const navItemStyle = {
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  padding: "10px",
-  cursor: "pointer",
-};
-const linkStyle = {
-  textDecoration: "none",
-  color: "black",
-  fontWeight: "500",
-};
-const activeLinkStyle = {
-  ...linkStyle,
-  color: "#013F7C",
-  fontWeight: "bold",
-};
+export default function Sidebar() {
+  return (
+    <div className="col-2 col-sm-4 col-md-3 col-xl-2">
+      <div>
+        <div className="d-flex align-items-center mt-n3">
+          <Link href="/" className="text-decoration-none text-dark">
+            <div className="d-flex align-items-center w-100">
+              <Image
+                src="/images/rrrr.png"
+                alt="Logo"
+                width={80}
+                height={100}
+                priority
+                loading="eager"
+                style={{ objectFit: "contain" }}
+              />
+              <p className="m-0 fw-bold fs-6">Race Innovations</p>
+            </div>
+          </Link>
+        </div>
 
-export default Sidebar;
+        <div className="text-center mt-3">
+          <Image
+            src="/images/man.png"
+            alt="Admin Profile"
+            width={90}
+            height={90}
+            priority
+            loading="eager"
+            style={{ borderRadius: "50%", objectFit: "cover" }}
+          />
+          <h5 className="fw-bold text-dark">User</h5>
+          <h6 className="text-dark">Admin</h6>
+        </div>
+
+        <nav className="w-100 mt-4">
+          <ul className="list-unstyled p-0 w-100">
+            {navLinks.map(({ href, Icon, text }) => (
+              <li key={href} className="d-flex align-items-center gap-2 p-2">
+                <Icon size={20} className="text-dark" />
+                <Link href={href} className="text-decoration-none text-dark fw-medium">
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
+}
