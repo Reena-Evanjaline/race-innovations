@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaGlobe, FaUsers, FaBullhorn, FaDatabase } from "react-icons/fa";
+import { FiDownload, FiFileText } from "react-icons/fi";
 import dynamic from "next/dynamic";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -51,88 +52,171 @@ function It() {
     "/images/jio.png",
   ];
 
+  // Put your PDF here: public/pdfs/it-profile.pdf
+  const itPdfUrl = "/pdf/it-profile.pdf";
+
   return (
     <>
       <div className="container-fluid">
-      <div className="row g-0 p-0 m-0" style={{ height: "100%" }}>
-  {/* Video Column */}
-  <div className="col-md-7 col-lg-7 col-12 p-0 position-relative" style={{ height: '100%' }}>
-    <div style={{ position: "relative", width: "100%", paddingTop: "56.25%" }}>
-      <ReactPlayer
-        url="https://youtu.be/dbbfw3Oz44M"
-        playing
-        muted
-        controls
-        width="100%"
-        height="100%"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          objectFit: "cover",
-        }}
-      />
-    </div>
-  </div>
+        <div className="row g-0 p-0 m-0" style={{ height: "100%" }}>
+          {/* Video Column */}
+          <div
+            className="col-md-7 col-lg-7 col-12 p-0 position-relative"
+            style={{ height: "100%" }}
+          >
+            <div style={{ position: "relative", width: "100%", paddingTop: "56.25%" }}>
+              <ReactPlayer
+                url="https://youtu.be/dbbfw3Oz44M"
+                playing
+                muted
+                controls
+                width="100%"
+                height="100%"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+          </div>
 
-  {/* Text Column */}
-  <div
-    className="col-md-5 col-lg-5 col-12 d-flex align-items-center"
-    style={{
-      backgroundImage: "url('/images/bg.jpeg')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      padding: "25px",
-    }}
-  >
-    <div className="d-flex flex-column align-items-end text-end w-100">
-      <h3 className="text-white">CUSTOMIZED IT SOLUTIONS</h3>
+          {/* Text Column */}
+          <div
+            className="col-md-5 col-lg-5 col-12 d-flex align-items-center position-relative"
+            style={{
+              backgroundImage: "url('/images/bg.jpeg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              padding: "25px",
+              minHeight: "100%",
+            }}
+          >
+            {/* Content */}
+            <div
+              className="d-flex flex-column align-items-end text-end w-100"
+              style={{ paddingBottom: "110px" }}
+            >
+              <h3 className="text-white">CUSTOMIZED IT SOLUTIONS</h3>
 
-      {[
-        {
-          label: "Website, TTL & Mass Communication Solutions",
-          icon: <FaGlobe size={24} />,
-          id: "ttl",
-        },
-        {
-          label: "Customized CRM Solutions & App Development",
-          icon: <FaUsers size={23} />,
-          id: "crm",
-        },
-        {
-          label: "Digital Marketing & AI-Powered Lead Generation",
-          icon: <FaBullhorn size={23} />,
-          id: "digital",
-        },
-        {
-          label: "Data Mining & Business Intelligence Data Mining",
-          icon: <FaDatabase size={23} />,
-          id: "mining",
-        },
-      ].map((item, i) => (
-        <p
-          key={i}
-          className="d-flex align-items-center justify-content-end text-white gap-3 mt-2"
-          style={{ cursor: "pointer" }}
-          onClick={() =>
-            document
-              .getElementById(item.id)
-              ?.scrollIntoView({ behavior: "smooth", block: "center" })
-          }
-        >
-          <span style={{ minWidth: "30px", textAlign: "center" }}>
-            {item.icon}
-          </span>
-          <span>{item.label}</span>
-        </p>
-      ))}
-    </div>
-  </div>
-</div>
+              {[
+                {
+                  label: "Website, TTL & Mass Communication Solutions",
+                  icon: <FaGlobe size={24} />,
+                  id: "ttl",
+                },
+                {
+                  label: "Customized CRM Solutions & App Development",
+                  icon: <FaUsers size={23} />,
+                  id: "crm",
+                },
+                {
+                  label: "Digital Marketing & AI-Powered Lead Generation",
+                  icon: <FaBullhorn size={23} />,
+                  id: "digital",
+                },
+                {
+                  label: "Data Mining & Business Intelligence Data Mining",
+                  icon: <FaDatabase size={23} />,
+                  id: "mining",
+                },
+              ].map((item, i) => (
+                <p
+                  key={i}
+                  className="d-flex align-items-center justify-content-end text-white gap-3 mt-2"
+                  style={{ cursor: "pointer" }}
+                  onClick={() =>
+                    document.getElementById(item.id)?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    })
+                  }
+                >
+                  <span style={{ minWidth: "30px", textAlign: "center" }}>
+                    {item.icon}
+                  </span>
+                  <span>{item.label}</span>
+                </p>
+              ))}
+            </div>
 
+            {/* ✅ White PDF Download button INSIDE bottom-right area */}
+            <div
+              style={{
+                position: "absolute",
+                left: "25px",
+                right: "25px",
+                bottom: "22px",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <a
+                href={itPdfUrl}
+                download="/pdf/it-profile.pdf"
+                className="text-decoration-none"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  padding: "14px 16px",
+                  borderRadius: "12px",
+                  border: "1px solid rgba(255,255,255,0.9)",
+                  background: "#ffffff",
+                  color: "#0B1220",
+                  fontWeight: 800,
+                  letterSpacing: "0.2px",
+                  boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
+                }}
+              >
+                <span
+                  style={{
+                    width: 38,
+                    height: 38,
+                    borderRadius: 10,
+                    display: "grid",
+                    placeItems: "center",
+                    background: "rgba(41,59,177,0.10)",
+                    color: "#293BB1",
+                  }}
+                >
+                  <FiFileText size={20} />
+                </span>
 
+                <span style={{ lineHeight: 1.1 }}>
+                   IT Profile
+                  <span
+                    style={{
+                      display: "block",
+                      fontSize: 12,
+                      opacity: 0.75,
+                      fontWeight: 700,
+                      marginTop: 2,
+                    }}
+                  >
+                    PDF
+                  </span>
+                </span>
 
+                <span
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 10,
+                    display: "grid",
+                    placeItems: "center",
+                    background: "rgba(41,59,177,0.10)",
+                    color: "#293BB1",
+                  }}
+                >
+                  <FiDownload size={18} />
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Tools & Tech Section */}
@@ -151,12 +235,7 @@ function It() {
       <div className="scroll-container mt-4">
         <div className="scroll-content scroll-left">
           {images.concat(images).map((img, index) => (
-            <img
-              key={`left-${index}`}
-              src={img}
-              alt="Tech Logo"
-              className="scroll-img"
-            />
+            <img key={`left-${index}`} src={img} alt="Tech Logo" className="scroll-img" />
           ))}
         </div>
       </div>
@@ -164,12 +243,7 @@ function It() {
       <div className="scroll-container">
         <div className="scroll-content scroll-right">
           {Rightimages.concat(Rightimages).map((img, index) => (
-            <img
-              key={`right-${index}`}
-              src={img}
-              alt="Tech Logo"
-              className="scroll-img"
-            />
+            <img key={`right-${index}`} src={img} alt="Tech Logo" className="scroll-img" />
           ))}
         </div>
       </div>
@@ -190,12 +264,7 @@ function It() {
       <div className="scroll-container">
         <div className="scroll-content scroll-left">
           {image.concat(image).map((img, index) => (
-            <img
-              key={`infra-${index}`}
-              src={img}
-              alt="Infra Logo"
-              className="h-30 w-40"
-            />
+            <img key={`infra-${index}`} src={img} alt="Infra Logo" className="h-30 w-40" />
           ))}
         </div>
       </div>
